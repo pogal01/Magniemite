@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1336241846366662}
+  m_IsPrefabAsset: 1
+--- !u!1 &1336241846366662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4757269067132828}
+  - component: {fileID: 114859375063919470}
+  m_Layer: 0
+  m_Name: InvisiblePufferfish 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4757269067132828
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1336241846366662}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 324.3661, y: 306.02243, z: -8.222162}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114859375063919470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1336241846366662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43eec9d3210ce76409804f77ce571329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickOriginal: 0
+  PickCute: 0
+  Dragnie: 0
+  Magling: 0
+  Link: 0
+  CharacterPicked: 0
+  PickedCharacter: 0
+  Original: {fileID: 1839707279632530, guid: 6973edb16cf4db84c877c02cce3504cd, type: 2}
+  Cute: {fileID: 1582986871954482, guid: bfd4a6b56a612c341be1961a75ea0e4f, type: 2}
+  Dragniemite: {fileID: 1472983489723230, guid: 54c1942a9d0a9fe48b6b8b26f5ad045a,
+    type: 2}
+  Magnieling: {fileID: 1699737030785038, guid: 5169ad94f6b162a4eb826dae9e97a154, type: 2}
+  Selected: {fileID: 0}

@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1811588955045416}
+  m_IsPrefabAsset: 1
+--- !u!1 &1811588955045416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4457364651246636}
+  - component: {fileID: 114669989201897690}
+  - component: {fileID: 114849783583094370}
+  m_Layer: 0
+  m_Name: InvisPuffer3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4457364651246636
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1811588955045416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 508.99777, y: 239.94992, z: -12.445489}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114669989201897690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1811588955045416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54dea894df1e0bf40a7eb564b1e2d7ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickOriginal: 0
+  PickCute: 0
+  Dragnie: 0
+  Magling: 0
+  CharacterPicked: 1
+  PickedCharacter: 0
+  Original: {fileID: 1026621002636246, guid: 4ab6e6fde99dd5448a6e5e68a6b98318, type: 2}
+  Cute: {fileID: 1303999409346962, guid: 9cd13f4418f05994fa2f890131e47884, type: 2}
+  Dragniemite: {fileID: 1977414419004948, guid: 620acfd90699ad9459cd99699be2f456,
+    type: 2}
+  Magnieling: {fileID: 1527031197572240, guid: 9f961cd579e31614486d5547809fdbf5, type: 2}
+  Selected: {fileID: 1955478908638452, guid: 70f61d685b0e7ab4a983f214b81f3565, type: 2}
+--- !u!114 &114849783583094370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1811588955045416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e87f56b0dd254a1499de3270f80033d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Link2: 0

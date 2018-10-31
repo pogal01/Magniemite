@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1310653539584478}
+  m_IsPrefabAsset: 1
+--- !u!1 &1310653539584478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4882013661273168}
+  - component: {fileID: 114799788834892724}
+  m_Layer: 0
+  m_Name: AudioMannager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4882013661273168
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310653539584478}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -28.54319, y: 9.551115, z: -1.0346594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114799788834892724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1310653539584478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5470bd44d2b124f8b0838cb13823d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - Name: MagniemiteHurt
+    clip: {fileID: 8300000, guid: d8715ac5914f48d4c86d58fa631f3bd1, type: 3}
+    Volume: 1
+    Pitch: 1.01
+    source: {fileID: 0}
+  - Name: LowestSpikepass
+    clip: {fileID: 8300000, guid: 853b46f6e9e4a8f468d433a8af539082, type: 3}
+    Volume: 0.647
+    Pitch: 1.01
+    source: {fileID: 0}
+  - Name: LowSpikepass
+    clip: {fileID: 8300000, guid: ff62cf6d1dbdf904099d625dbc0247c6, type: 3}
+    Volume: 0.647
+    Pitch: 1.01
+    source: {fileID: 0}
+  - Name: NormalSpikepass
+    clip: {fileID: 8300000, guid: 5d9e6e7bb79c93f4d8fe86a907d83345, type: 3}
+    Volume: 0.647
+    Pitch: 1.01
+    source: {fileID: 0}
+  - Name: HighSpikepass
+    clip: {fileID: 8300000, guid: c4a817479185561459872cd6544cf1f8, type: 3}
+    Volume: 0.647
+    Pitch: 1.01
+    source: {fileID: 0}
+  - Name: HighestSpikepass
+    clip: {fileID: 8300000, guid: dd8b01c87d3b56740b9bc67f17608eda, type: 3}
+    Volume: 0.647
+    Pitch: 1.01
+    source: {fileID: 0}
