@@ -267,7 +267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PickEvent: 1
   ActiveEvent: 0
-  Halloween: 1
+  Halloween: 0
+  Christmas: 1
   BEvents: 0
 --- !u!114 &298400487
 MonoBehaviour:

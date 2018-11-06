@@ -7,6 +7,7 @@ public class Events : MonoBehaviour {
 	public int PickEvent;
 	public int ActiveEvent;
 	public bool Halloween = false;
+	public bool Christmas = false;
 	//public bool EChristmas;
 	//public bool Easter;
 	public bool BEvents;

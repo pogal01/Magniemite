@@ -248,7 +248,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Thing: {fileID: 1272345958299552}
   Tag: SpikeSpawn
-  Spike1Destroyed: 0
+  SpriteActivation: 0
+  loc1: 0
+  loc2: 0
+  loc3: 0
+  loc4: 0
+  loc5: 0
+  SpikeDestroyed: 0
   Reseting: 0
   Reseted: 0
   Script: 1
