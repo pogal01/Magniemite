@@ -7,6 +7,7 @@ public class Hats : MonoBehaviour {
 	public bool None;
 	public bool Halloween;   // Add other events here
 	public bool Christmas;
+	public string Character;
 	public GameObject ChristmasHatBF;
 	public GameObject ChristmasHatAF;
 
@@ -65,14 +66,14 @@ public class Hats : MonoBehaviour {
 				None = false;
 				Halloween = false;
 
-				if (GameObject.Find("Magneimite").GetComponent<Flip>().FlipGrav == true)
+				if (GameObject.Find(Character).GetComponent<Flip>().FlipGrav == true)
 				{ 
 				ChristmasHatAF.gameObject.SetActive(true);
 				ChristmasHatBF.gameObject.SetActive(false);
 					Debug.Log("Flipped");
 				}
 
-				if (GameObject.Find("Magneimite").GetComponent<Flip>().FlipGrav == false)
+				if (GameObject.Find(Character).GetComponent<Flip>().FlipGrav == false)
 				{
 				ChristmasHatAF.gameObject.SetActive(false);
 				ChristmasHatBF.gameObject.SetActive(true);
