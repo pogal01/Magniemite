@@ -29,7 +29,7 @@ public class CutiemiteAlimation : MonoBehaviour
 		if (GameObject.Find("Cute" ).GetComponent<CeliingGroundCheck>().Grounded == true)
 		{
 			AnimateW();
-			Debug.Log("Ground");
+			//Debug.Log("Ground");
 		}
 		else
 		{

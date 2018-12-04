@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Hats : MonoBehaviour {
 
-	public bool None;
-	public bool Halloween;   // Add other events here
-	public bool Christmas;
+	public bool None = false;
+	public bool Halloween = false;   // Add other events here
+	public bool Christmas = false;
 	public string Character;
 	public GameObject ChristmasHatBF;
 	public GameObject ChristmasHatAF;
@@ -23,23 +23,27 @@ public class Hats : MonoBehaviour {
 				Christmas = true;
 				None = false;
 				Halloween = false;
-
 				ChristmasHatAF.gameObject.SetActive(false);
 				ChristmasHatBF.gameObject.SetActive(true);
 
 			}
-			if (GameObject.Find("EventPuffer").GetComponent<Events>().Halloween == true)
+			else if (GameObject.Find("EventPuffer").GetComponent<Events>().Halloween == true)
 			{
 				Christmas = false;
 				None = false;
 				Halloween = true;
 			}
+			else
+			{
+				None = true;
+			}
 		}
-	}
-	// Update is called once per frame
-	void Update ()
-	{
-		if(None == true)
+		else
+		{
+			None = true;
+		}
+
+		if (None == true)
 		{
 			Halloween = false;
 			Christmas = false;
@@ -51,11 +55,18 @@ public class Hats : MonoBehaviour {
 			Christmas = false;
 		}
 
-		if(Christmas == false)
+		if (Christmas == false)
 		{
 			ChristmasHatAF.gameObject.SetActive(false);
 			ChristmasHatBF.gameObject.SetActive(false);
 		}
+
+
+	}
+	// Update is called once per frame
+	void Update ()
+	{
+		
 
 
 		if (GameObject.Find("EventPuffer").GetComponent<Events>().BEvents == true )
@@ -66,32 +77,61 @@ public class Hats : MonoBehaviour {
 				None = false;
 				Halloween = false;
 
-				if (GameObject.Find(Character).GetComponent<Flip>().FlipGrav == true)
-				{ 
-				ChristmasHatAF.gameObject.SetActive(true);
-				ChristmasHatBF.gameObject.SetActive(false);
-					Debug.Log("Flipped");
+
+				if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Char == 1)
+				{
+					//Debug.Log("Cute");
+					if (GameObject.Find(Character).GetComponent<RealFlip>().FlipGrav == true)
+					{
+						ChristmasHatAF.gameObject.SetActive(true);
+						ChristmasHatBF.gameObject.SetActive(false);
+						//Debug.Log("Flipped");
+					}
+					if (GameObject.Find(Character).GetComponent<RealFlip>().FlipGrav == false)
+					{
+						ChristmasHatAF.gameObject.SetActive(false);
+						ChristmasHatBF.gameObject.SetActive(true);
+						//Debug.Log("NotFlipped");
+					}
+
+
 				}
 
-				if (GameObject.Find(Character).GetComponent<Flip>().FlipGrav == false)
+				else if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Char == 0)
 				{
-				ChristmasHatAF.gameObject.SetActive(false);
-				ChristmasHatBF.gameObject.SetActive(true);
-					Debug.Log("NotFlipped");
+					
+					if (GameObject.Find(Character).GetComponent<Flip>().FlipGrav == true)
+					{
+						ChristmasHatAF.gameObject.SetActive(true);
+						ChristmasHatBF.gameObject.SetActive(false);
+						//Debug.Log("Flipped");
+						//Debug.Log("MagniemiteTest");
+					}
+
+					if (GameObject.Find(Character).GetComponent<Flip>().FlipGrav == false)
+					{
+						ChristmasHatAF.gameObject.SetActive(false);
+						ChristmasHatBF.gameObject.SetActive(true);
+						//Debug.Log("NotFlipped");
+						//Debug.Log("MagniemiteTest");
+					}
+
+
 				}
+
+
+
+
 			}
+
 			
+		}
 			if (Halloween == true)
 			{
 				//Insert Halloween accessory here
 				ChristmasHatAF.gameObject.SetActive(false);
 				ChristmasHatBF.gameObject.SetActive(false);
 			}
-			
-		}
-		else
-		{
-			None = true;
-		}
+		
 	}
 }

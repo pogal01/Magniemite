@@ -86,7 +86,7 @@ public class Spawn_loc1 : MonoBehaviour
 
 			}
 
-		print(Currentposition.name);
+		//print(Currentposition.name);
 		Thing.transform.position = Currentposition.transform.position;
 	}
 

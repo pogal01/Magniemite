@@ -29,7 +29,7 @@ public class MagnielingAnimation : MonoBehaviour
 		if (GameObject.Find("MaglingCollision").GetComponent<GroundCheck>().Ground == true)
 		{
 		AnimateW();
-		Debug.Log("Ground");
+		//Debug.Log("Ground");
 		}
 		else
 		{
@@ -56,9 +56,6 @@ public class MagnielingAnimation : MonoBehaviour
 	public void AnimateHit()
 	{
 		Animator.SetBool("HasBeenHit", true);
-
-
-
 		FindObjectOfType<AudioMannager>().Play("Hit");
 
 	}

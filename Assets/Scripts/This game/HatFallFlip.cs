@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HatFall : MonoBehaviour {
+public class HatFallFlip : MonoBehaviour {
 
 	public Rigidbody2D Ridge;
-	public GameObject Hat;
+	public GameObject HatHolder;
+	public GameObject HatBF;
+	public GameObject HatAF;
 	public GameObject PlayerGO;
-	public GameObject HatPos;
+	public GameObject HatPosBF;
+	public GameObject HatPosAF;
 	public string PlayerS;
 
 	// Use this for initialization
@@ -23,16 +26,18 @@ public class HatFall : MonoBehaviour {
 		if(GameObject.Find(PlayerS).GetComponent<Damaged>().Hit == true)
 		{
 			Ridge.simulated = true;
-			Hat.transform.parent = null;
+			HatBF.transform.parent = null;
+			HatAF.transform.parent = null;
 
 		}
 		if (GameObject.Find("InvisablePufferfish5").GetComponent<Revived>().Reserect == true)
 		{
 			Ridge.simulated = false;
-			Hat.transform.parent = PlayerGO.transform;
-			Hat.transform.position = HatPos.transform.position;
-			Hat.transform.rotation = HatPos.transform.rotation;
-
+			HatHolder.transform.parent = PlayerGO.transform;
+			HatBF.transform.position = HatPosBF.transform.position;
+			HatBF.transform.rotation = HatPosBF.transform.rotation;
+			HatAF.transform.position = HatPosAF.transform.position;
+			HatAF.transform.rotation = HatPosAF.transform.rotation;
 		}
 
 

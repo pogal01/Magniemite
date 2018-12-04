@@ -41,10 +41,10 @@ public class Damaged : MonoBehaviour
 
 		if (GameObject.Find("EndWall").GetComponent<Eliminate_Player>().DestroyPlayer == true)
 		{
-			Debug.Log("Destroyed the player");
+			//Debug.Log("Destroyed the player");
 			
 		}
-
+		
 
 	}
 

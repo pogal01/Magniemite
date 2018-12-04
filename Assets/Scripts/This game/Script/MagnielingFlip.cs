@@ -39,7 +39,7 @@ public class MagnielingFlip : MonoBehaviour
 			if (FlipGrav)
 			{
 				Physics2D.gravity = new Vector2(0, 9.8f);
-				Debug.Log("Fliped");
+				//Debug.Log("Fliped");
 				FlipGrav = true;
 				FlipAnimation();
 			}
@@ -48,7 +48,7 @@ public class MagnielingFlip : MonoBehaviour
 			{
 
 				Physics2D.gravity = new Vector2(0, -9.8f);
-				Debug.Log("Normal");
+				//Debug.Log("Normal");
 				FlipGrav = false;
 				FlipAnimation2();
 			}

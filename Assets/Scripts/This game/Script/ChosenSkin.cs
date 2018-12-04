@@ -26,5 +26,17 @@ public class ChosenSkin : MonoBehaviour {
 
 
 		}
+		if (GameObject.Find("InvisiblePufferfish3").GetComponent<ChoseSkin>().Dragnie == true)
+		{
+			PlayerPrefs.SetInt("CharacterPicked", 3);
+
+
+		}
+		if (GameObject.Find("InvisiblePufferfish3").GetComponent<ChoseSkin>().Magling == true)
+		{
+			PlayerPrefs.SetInt("CharacterPicked", 4);
+
+
+		}
 	}
 }

@@ -26,7 +26,7 @@ public class MagniemiteAlimation : MonoBehaviour
 		if (GameObject.Find("Magneimite").GetComponent<CeliingGroundCheck>().Grounded == true)
 		{
 			AnimateW();
-			Debug.Log("Ground");
+			//Debug.Log("Ground");
 		}
 		else
 		{
