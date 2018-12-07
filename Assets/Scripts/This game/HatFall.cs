@@ -8,12 +8,15 @@ public class HatFall : MonoBehaviour {
 	public GameObject Hat;
 	public GameObject PlayerGO;
 	public GameObject HatPos;
+	public GameObject HatHolder;
+	public GameObject HatHolderPos;
 	public string PlayerS;
 
 	// Use this for initialization
 	void Start ()
 	{
 		Ridge = GetComponent<Rigidbody2D>();
+		HatPos.transform.position = Hat.transform.position;
 	}
 	
 	// Update is called once per frame
@@ -23,13 +26,15 @@ public class HatFall : MonoBehaviour {
 		if(GameObject.Find(PlayerS).GetComponent<Damaged>().Hit == true)
 		{
 			Ridge.simulated = true;
-			Hat.transform.parent = null;
+			HatHolder.transform.parent = null;
+			
 
 		}
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Revived>().Reserect == true)
+		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Rez == true)
 		{
 			Ridge.simulated = false;
-			Hat.transform.parent = PlayerGO.transform;
+			HatHolder.transform.parent = PlayerGO.transform;
+			HatHolder.transform.position = HatHolderPos.transform.position;
 			Hat.transform.position = HatPos.transform.position;
 			Hat.transform.rotation = HatPos.transform.rotation;
 

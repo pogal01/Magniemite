@@ -20,19 +20,29 @@ public class Hats : MonoBehaviour {
 		{
 			if (GameObject.Find("EventPuffer").GetComponent<Events>().Christmas == true)
 			{
+				//Christmas code here
 				Christmas = true;
-				None = false;
-				Halloween = false;
 				ChristmasHatAF.gameObject.SetActive(false);
 				ChristmasHatBF.gameObject.SetActive(true);
+
+				//Put other events here
+				None = false;
+				Halloween = false;
+				
 
 			}
 			else if (GameObject.Find("EventPuffer").GetComponent<Events>().Halloween == true)
 			{
+				Halloween = true;
+				//Halloween stuff here
+
+
+				// Other events belllow
 				Christmas = false;
 				None = false;
-				Halloween = true;
+				
 			}
+			// Input other events here
 			else
 			{
 				None = true;
@@ -47,6 +57,7 @@ public class Hats : MonoBehaviour {
 		{
 			Halloween = false;
 			Christmas = false;
+			//Input other events (boolens) here 
 		}
 
 		if (Halloween == true)

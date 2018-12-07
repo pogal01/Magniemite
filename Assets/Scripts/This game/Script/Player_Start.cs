@@ -31,6 +31,7 @@ public class Player_Start : MonoBehaviour
 	public bool BeenHit = false;
 	public bool Dead = false;
 	public bool Rez = false;
+	public bool TriggrBackGround = false;
 	
 	// Use this for initialization
 	
@@ -287,7 +288,7 @@ public class Player_Start : MonoBehaviour
 
 	void Update()
 	{
-
+		//start of Update
 		CharacterHit();
 
 		if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().Reseting == true)
@@ -336,6 +337,18 @@ public class Player_Start : MonoBehaviour
 			Dead = false;
 			Invoke("SetDeathScore",1);
 		}
+
+		if(Rez == true)
+		{
+			Invoke("BackgroundTrigger", 1);
+		}
+
+		if(TriggrBackGround == true)
+		{
+			Invoke("BackGroundTriggerEnd", 1);
+		}
+
+		//End of Update
 	}
 
 
@@ -378,7 +391,15 @@ public class Player_Start : MonoBehaviour
 		
 	}
 
+	void BackgroundTrigger()
+	{
+		TriggrBackGround = true;
+	}
 
+	void BackGroundTriggerEnd()
+	{
+		TriggrBackGround = false;
+	}
 
 
 }

@@ -34,12 +34,14 @@ public class ScrollingUVs_Layers : MonoBehaviour
 		}
 
 		
-		if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().Reseting == true)
+	
+		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().TriggrBackGround == true)
 		{
-			
 			scriptActive = true;
-				
 		}
+				
+				
+		
 		
 	}
 

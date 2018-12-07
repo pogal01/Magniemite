@@ -34,7 +34,7 @@ public class Flip : MonoBehaviour
 			if (FlipGrav)
 			{
 				Physics2D.gravity = new Vector2(0, 9.8f);
-				Debug.Log("Fliped");
+				//Debug.Log("Fliped");
 				SpriteRen.flipY = true;
 			}
 
@@ -42,7 +42,7 @@ public class Flip : MonoBehaviour
 			{
 
 				Physics2D.gravity = new Vector2(0, -9.8f);
-				Debug.Log("Normal");
+				//Debug.Log("Normal");
 				SpriteRen.flipY = false;
 				
 			}
