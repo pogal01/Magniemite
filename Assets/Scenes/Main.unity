@@ -6984,8 +6984,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1055015278}
-  - component: {fileID: 1055015277}
-  - component: {fileID: 1055015276}
   m_Layer: 0
   m_Name: 'MagnielingHatHolder_Pos '
   m_TagString: Untagged
@@ -6993,44 +6991,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &1055015276
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1055015275}
-  m_BodyType: 0
-  m_Simulated: 0
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1055015277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1055015275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c157f42ff9dd2c4ab10978eed81462b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ridge: {fileID: 1055015276}
-  Hat: {fileID: 1055015275}
-  PlayerGO: {fileID: 594252812}
-  HatPos: {fileID: 0}
-  HatHolder: {fileID: 0}
-  HatHolderPos: {fileID: 0}
-  PlayerS: Magnieling
 --- !u!4 &1055015278
 Transform:
   m_ObjectHideFlags: 0
