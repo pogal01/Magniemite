@@ -16,7 +16,13 @@ public class Player_Start_Normal : MonoBehaviour
 	public GameObject Start_pos;
 	public GameObject DeathScreen;
 	//Called objects
-	private GameObject InvisablePufferfish5;
+	private GameObject InvisablePufferfish5 = null;
+	private GameObject Spike1 = null;
+	private GameObject Spike2 = null;
+	private GameObject Spike3 = null;
+	private GameObject Spike4 = null;
+	private GameObject Spike5 = null;
+	private GameObject EndWall = null;
 	//Called objects end
 	public bool ReviveScreen = false;
 	public bool ADError = false;
@@ -179,6 +185,17 @@ public class Player_Start_Normal : MonoBehaviour
 
 		//Finding objects
 		InvisablePufferfish5 = GameObject.Find("InvisablePufferfish5");
+		Spike1 = GameObject.Find("Spike");
+		Spike2 = GameObject.Find("Spike2");
+		Spike3 = GameObject.Find("Spike3");
+		Spike4 = GameObject.Find("Spike4");
+		Spike5 = GameObject.Find("Spike5");
+
+
+
+
+		EndWall = GameObject.Find("EndWall");
+
 	}
 
 	void AdERROR()
@@ -257,14 +274,14 @@ public class Player_Start_Normal : MonoBehaviour
 			Reserect();
 		}
 
-		if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().Reseting == true)
+		if (Spike1.GetComponent<Spawn_loc1>().Reseting == true)
 		{
 
 			MagnieWalk = true;
-
+			
 		}
 
-		if (GameObject.Find("EndWall").GetComponent<GameOver>().End == true)
+		if (EndWall.GetComponent<GameOver>().End == true)
 		{
 			if (InternetConnecton == false)
 			{
@@ -289,7 +306,7 @@ public class Player_Start_Normal : MonoBehaviour
 		}
 		if (CanBeRevived == false)
 		{
-			if (GameObject.Find("EndWall").GetComponent<GameOver>().End == true)
+			if (EndWall.GetComponent<GameOver>().End == true)
 			{
 				Invoke("ENDSecondLife", 1);
 			}
@@ -308,23 +325,23 @@ public class Player_Start_Normal : MonoBehaviour
 			SetScoreText();
 
 			// Spikes effects
-			if(GameObject.Find("Spike").GetComponent<Spawn_loc1>().loc1 == true)
+			if(Spike1.GetComponent<Spawn_loc1>().loc1 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighestSpikepass");
 			}
-			if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().loc2 == true)
+			if (Spike1.GetComponent<Spawn_loc1>().loc2 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighSpikepass");
 			}
-			if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().loc3 == true)
+			if (Spike1.GetComponent<Spawn_loc1>().loc3 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("NormalSpikepass");
 			}
-			if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().loc4 == true)
+			if (Spike1.GetComponent<Spawn_loc1>().loc4 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("LowSpikepass");
 			}
-			if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().loc5 == true)
+			if (Spike1.GetComponent<Spawn_loc1>().loc5 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("LowestSpikepass");
 			}
@@ -338,23 +355,23 @@ public class Player_Start_Normal : MonoBehaviour
 
 			// Spikes effects
 
-			if (GameObject.Find("Spike2").GetComponent<Spawn_loc1>().loc1 == true)
+			if (Spike2.GetComponent<Spawn_loc1>().loc1 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighestSpikepass");
 			}
-			if (GameObject.Find("Spike2").GetComponent<Spawn_loc1>().loc2 == true)
+			if (Spike2.GetComponent<Spawn_loc1>().loc2 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighSpikepass");
 			}
-			if (GameObject.Find("Spike2").GetComponent<Spawn_loc1>().loc3 == true)
+			if (Spike2.GetComponent<Spawn_loc1>().loc3 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("NormalSpikepass");
 			}
-			if (GameObject.Find("Spike2").GetComponent<Spawn_loc1>().loc4 == true)
+			if (Spike2.GetComponent<Spawn_loc1>().loc4 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("LowSpikepass");
 			}
-			if (GameObject.Find("Spike2").GetComponent<Spawn_loc1>().loc5 == true)
+			if (Spike2.GetComponent<Spawn_loc1>().loc5 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("LowestSpikepass");
 			}
@@ -367,23 +384,23 @@ public class Player_Start_Normal : MonoBehaviour
 			SetScoreText();
 
 			// Spikes effects
-			if (GameObject.Find("Spike3").GetComponent<Spawn_loc1>().loc1 == true)
+			if (Spike3.GetComponent<Spawn_loc1>().loc1 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighestSpikepass");
 			}
-			if (GameObject.Find("Spike3").GetComponent<Spawn_loc1>().loc2 == true)
+			if (Spike3.GetComponent<Spawn_loc1>().loc2 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighSpikepass");
 			}
-			if (GameObject.Find("Spike3").GetComponent<Spawn_loc1>().loc3 == true)
+			if (Spike3.GetComponent<Spawn_loc1>().loc3 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("NormalSpikepass");
 			}
-			if (GameObject.Find("Spike3").GetComponent<Spawn_loc1>().loc4 == true)
+			if (Spike3.GetComponent<Spawn_loc1>().loc4 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("LowSpikepass");
 			}
-			if (GameObject.Find("Spike3").GetComponent<Spawn_loc1>().loc5 == true)
+			if (Spike3.GetComponent<Spawn_loc1>().loc5 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("LowestSpikepass");
 			}
@@ -396,23 +413,23 @@ public class Player_Start_Normal : MonoBehaviour
 			SetScoreText();
 
 			// Spikes effects
-			if (GameObject.Find("Spike4").GetComponent<Spawn_loc1>().loc1 == true)
+			if (Spike4.GetComponent<Spawn_loc1>().loc1 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighestSpikepass");
 			}
-			if (GameObject.Find("Spike4").GetComponent<Spawn_loc1>().loc2 == true)
+			if (Spike4.GetComponent<Spawn_loc1>().loc2 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighSpikepass");
 			}
-			if (GameObject.Find("Spike4").GetComponent<Spawn_loc1>().loc3 == true)
+			if (Spike4.GetComponent<Spawn_loc1>().loc3 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("NormalSpikepass");
 			}
-			if (GameObject.Find("Spike4").GetComponent<Spawn_loc1>().loc4 == true)
+			if (Spike4.GetComponent<Spawn_loc1>().loc4 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("LowSpikepass");
 			}
-			if (GameObject.Find("Spike4").GetComponent<Spawn_loc1>().loc5 == true)
+			if (Spike4.GetComponent<Spawn_loc1>().loc5 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("LowestSpikepass");
 			}
@@ -425,23 +442,23 @@ public class Player_Start_Normal : MonoBehaviour
 			SetScoreText();
 
 			// Spikes effects
-			if (GameObject.Find("Spike5").GetComponent<Spawn_loc1>().loc1 == true)
+			if (Spike5.GetComponent<Spawn_loc1>().loc1 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighestSpikepass");
 			}
-			if (GameObject.Find("Spike5").GetComponent<Spawn_loc1>().loc2 == true)
+			if (Spike5.GetComponent<Spawn_loc1>().loc2 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighSpikepass");
 			}
-			if (GameObject.Find("Spike5").GetComponent<Spawn_loc1>().loc3 == true)
+			if (Spike5.GetComponent<Spawn_loc1>().loc3 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("NormalSpikepass");
 			}
-			if (GameObject.Find("Spike5").GetComponent<Spawn_loc1>().loc4 == true)
+			if (Spike5.GetComponent<Spawn_loc1>().loc4 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("LowSpikepass");
 			}
-			if (GameObject.Find("Spike5").GetComponent<Spawn_loc1>().loc5 == true)
+			if (Spike5.GetComponent<Spawn_loc1>().loc5 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("LowestSpikepass");
 			}
