@@ -33,19 +33,6 @@ public class Player_Start_Hard : MonoBehaviour
 	public Text CurrentHighScore;
 
 
-	void RevivescreenF()
-	{
-
-	}
-
-	void ADErrorF()
-	{
-
-	}
-	void SkipedF()
-	{
-
-	}
 
 	void OriginalChar()
 	{
@@ -135,7 +122,7 @@ public class Player_Start_Hard : MonoBehaviour
 
 	}
 
-
+	
 
 	void Start()
 	{

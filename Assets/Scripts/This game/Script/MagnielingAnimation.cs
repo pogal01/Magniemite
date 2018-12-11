@@ -56,7 +56,6 @@ public class MagnielingAnimation : MonoBehaviour
 	public void AnimateHit()
 	{
 		Animator.SetBool("HasBeenHit", true);
-		FindObjectOfType<AudioMannager>().Play("Hit");
 
 	}
 

@@ -33,7 +33,7 @@ public class DragniemiteAlimation : MonoBehaviour
 
 	public void AnimateFfalse() // F = Fly
 	{
-		Animator.SetBool("IFlying", false);
+		Animator.SetBool("IsFlying", false);
 
 	}
 
@@ -96,7 +96,7 @@ public class DragniemiteAlimation : MonoBehaviour
 		{
 			AnimateHit();
 
-			FindObjectOfType<AudioMannager>().Play("Hit");
+			//FindObjectOfType<AudioMannager>().Play("Hit");
 		}
 
 		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Rez == true)

@@ -80,10 +80,10 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Cute version
+  m_text: Cute-Mite
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -148,10 +148,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 22.348297}
   m_textInfo:
     textComponent: {fileID: 114519151903057882}
-    characterCount: 12
+    characterCount: 9
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -282,10 +282,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.34453025, y: 0.721}
-  m_AnchorMax: {x: 0.53800005, y: 0.95923626}
-  m_AnchoredPosition: {x: -1, y: -1.3999786}
-  m_SizeDelta: {x: -2.5, y: 2.199997}
+  m_AnchorMin: {x: 0.2656073, y: 0.721}
+  m_AnchorMax: {x: 0.45151386, y: 0.95923626}
+  m_AnchoredPosition: {x: -1, y: -83.39998}
+  m_SizeDelta: {x: 6.5, y: 2.199997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224726838707933646
 RectTransform:
@@ -302,8 +302,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.1, y: -140.072}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 19.1, y: -139.5}
+  m_SizeDelta: {x: 100, y: 101.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224766700938772798
 RectTransform:

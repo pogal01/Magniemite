@@ -38,7 +38,7 @@ public class AudioMannager : MonoBehaviour {
 		if (s == null)
 		{
 
-			Debug.LogWarning("Pog U fukd up and called your sound the wrong name u meme."+ name + "Not found!!!");
+			Debug.LogWarning("Pog U fukd up and called your sound the wrong name u meme. "+ name + " Not found!!!");
 			return;
 		}
 		s.source.Play();

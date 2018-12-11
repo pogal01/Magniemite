@@ -32,7 +32,7 @@ public class DragniemiteFlip : MonoBehaviour
 			if (FlipGrav)
 			{
 				Physics2D.gravity = new Vector2(0, 9.8f);
-				Debug.Log("Fliped");
+				//Debug.Log("Fliped");
 				
 			}
 
@@ -40,7 +40,7 @@ public class DragniemiteFlip : MonoBehaviour
 			{
 
 				Physics2D.gravity = new Vector2(0, -9.8f);
-				Debug.Log("Normal");
+				//Debug.Log("Normal");
 				
 
 			}

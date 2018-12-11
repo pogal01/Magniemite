@@ -8,6 +8,7 @@ public class Hat : MonoBehaviour {
 	public bool Halloween;   // Add other events here
 	public bool Christmas;
 	public GameObject ChristmasHat;
+	//Add more hats here
 	// Use this for initialization
 	void Start()
 	{

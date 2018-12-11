@@ -15,6 +15,9 @@ public class Player_Start_Normal : MonoBehaviour
 	public GameObject Magnieling;
 	public GameObject Start_pos;
 	public GameObject DeathScreen;
+	//Called objects
+	private GameObject InvisablePufferfish5;
+	//Called objects end
 	public bool ReviveScreen = false;
 	public bool ADError = false;
 	public bool Skiped = false;
@@ -105,7 +108,7 @@ public class Player_Start_Normal : MonoBehaviour
 
 	void Character()
 	{
-		Debug.Log("Character function active");
+		
 		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 0)
 		{
 			OriginalChar();
@@ -174,6 +177,8 @@ public class Player_Start_Normal : MonoBehaviour
 			InternetConnecton = true;
 		}
 
+		//Finding objects
+		InvisablePufferfish5 = GameObject.Find("InvisablePufferfish5");
 	}
 
 	void AdERROR()
@@ -241,13 +246,13 @@ public class Player_Start_Normal : MonoBehaviour
 	void Update()
 	{
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().DeathScoreSet == true)
+		if (InvisablePufferfish5.GetComponent<Player_Start>().DeathScoreSet == true)
 		{
 			CanBeRevived = false;
 			SetDeathScore();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Revived>().Reserect == true)
+		if (InvisablePufferfish5.GetComponent<Revived>().Reserect == true)
 		{
 			Reserect();
 		}

@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1639159240704428}
+  m_IsPrefabAsset: 1
+--- !u!1 &1639159240704428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4286060328510600}
+  - component: {fileID: 114581227352452676}
+  - component: {fileID: 114797660889285038}
+  - component: {fileID: 114267287069907304}
+  - component: {fileID: 114350490344804696}
+  m_Layer: 0
+  m_Name: InvisablePufferfish5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4286060328510600
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639159240704428}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 327.2765, y: 425.81308, z: -10.907344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114267287069907304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639159240704428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5a168c2e0185342afff26140120594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114350490344804696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639159240704428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f852734f26b915444a10b774eb137d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BackgroundN: {fileID: 0}
+  BackgroundH: {fileID: 0}
+  BackgroundC: {fileID: 0}
+--- !u!114 &114581227352452676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639159240704428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e3f54ad397e0f4daa01bc1dcf9f226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReviveScreen: {fileID: 0}
+  AdErrorScreen: {fileID: 0}
+  YouSkiped: {fileID: 0}
+  Reserect: 0
+--- !u!114 &114797660889285038
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639159240704428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d477f91c804b9024bbe3ee96d463b9ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  Original: {fileID: 0}
+  Cute: {fileID: 0}
+  Dragniemite: {fileID: 0}
+  Magnieling: {fileID: 0}
+  Start_pos: {fileID: 0}
+  DeathScreen: {fileID: 0}
+  DeathScoreSet: 0
+  ReviveScreen: 1
+  ADError: 0
+  Skiped: 0
+  Char: 0
+  test: 0
+  CanBeRevived: 1
+  InternetConnecton: 0
+  Revived: 0
+  hasbeenrevived: 0
+  MagnieWalk: 0
+  BeenHit: 0
+  Dead: 0
+  Rez: 0
+  TriggrBackGround: 0
