@@ -9,13 +9,24 @@ public class RealFlip : MonoBehaviour
 	public Collider2D TopAF; // After flip
 	public Collider2D TopBF; //Before flip
 
-
+	private GameObject Endwall;
+	private GameObject Spike1;
 
 
 	public bool FlipGrav;
 	SpriteRenderer SpriteRen;
 	// Use this for initialization
 	public bool Activite;
+
+
+
+
+	private void Awake()
+	{
+		Endwall = GameObject.Find("EndWall");
+		Spike1 = GameObject.Find("Spike");
+	}
+
 	void Start()
 	{
 		FlipGrav = false;
@@ -77,12 +88,12 @@ public class RealFlip : MonoBehaviour
 		FlipScript();
 		//Debug.Log("Cute Activated");
 
-		if (GameObject.Find("EndWall").GetComponent<GameOver>().End == true)
+		if (Endwall.GetComponent<GameOver>().End == true)
 		{
 			Activite = false;
 		}
 
-		if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().Reseting == true)
+		if (Spike1.GetComponent<Spawn_loc1>().Reseting == true)
 		{
 			Activite = true;
 		}

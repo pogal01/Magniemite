@@ -11,14 +11,23 @@ public class Hats : MonoBehaviour {
 	public GameObject ChristmasHatBF;
 	public GameObject ChristmasHatAF;
 
+	private GameObject EventPuffer;
+	private GameObject InvisPuffer5;
+
+	private void Awake()
+	{
+		EventPuffer = GameObject.Find("EventPuffer");
+		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+	}
+
 
 
 	// Use this for initialization
 	void Start()
 	{
-		if (GameObject.Find("EventPuffer").GetComponent<Events>().BEvents == true)
+		if (EventPuffer.GetComponent<Events>().BEvents == true)
 		{
-			if (GameObject.Find("EventPuffer").GetComponent<Events>().Christmas == true)
+			if (EventPuffer.GetComponent<Events>().Christmas == true)
 			{
 				//Christmas code here
 				Christmas = true;
@@ -31,7 +40,7 @@ public class Hats : MonoBehaviour {
 				
 
 			}
-			else if (GameObject.Find("EventPuffer").GetComponent<Events>().Halloween == true)
+			else if (EventPuffer.GetComponent<Events>().Halloween == true)
 			{
 				Halloween = true;
 				//Halloween stuff here
@@ -80,7 +89,7 @@ public class Hats : MonoBehaviour {
 		
 
 
-		if (GameObject.Find("EventPuffer").GetComponent<Events>().BEvents == true )
+		if (EventPuffer.GetComponent<Events>().BEvents == true )
 		{
 			if(Christmas == true)
 			{
@@ -89,7 +98,7 @@ public class Hats : MonoBehaviour {
 				Halloween = false;
 
 
-				if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Char == 1)
+				if (InvisPuffer5.GetComponent<Player_Start>().Char == 1)
 				{
 					//Debug.Log("Cute");
 					if (GameObject.Find(Character).GetComponent<RealFlip>().FlipGrav == true)
@@ -108,10 +117,10 @@ public class Hats : MonoBehaviour {
 
 				}
 
-				else if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Char == 0)
+				else if (InvisPuffer5.GetComponent<Player_Start>().Char == 0)
 				{
 					
-					if (GameObject.Find(Character).GetComponent<Flip>().FlipGrav == true)
+					if (GetComponent<Flip>().FlipGrav == true)
 					{
 						ChristmasHatAF.gameObject.SetActive(true);
 						ChristmasHatBF.gameObject.SetActive(false);
@@ -119,7 +128,7 @@ public class Hats : MonoBehaviour {
 						//Debug.Log("MagniemiteTest");
 					}
 
-					if (GameObject.Find(Character).GetComponent<Flip>().FlipGrav == false)
+					if (GetComponent<Flip>().FlipGrav == false)
 					{
 						ChristmasHatAF.gameObject.SetActive(false);
 						ChristmasHatBF.gameObject.SetActive(true);

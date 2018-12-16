@@ -8,6 +8,28 @@ public class GameOver : MonoBehaviour {
 	public bool End ;
 	public bool Chance2;
 
+
+	private GameObject Spike1;
+	private GameObject Spike2;
+	private GameObject Spike3;
+	private GameObject Spike4;
+	private GameObject Spike5;
+	private GameObject InvisPuffer2;
+	private GameObject InvisPuffer3;
+	private GameObject InvisPuffer5;
+
+	private void Awake()
+	{
+		Spike1 = GameObject.Find("Spike");
+		Spike2 = GameObject.Find("Spike2");
+		Spike3 = GameObject.Find("Spike3");
+		Spike4 = GameObject.Find("Spike4");
+		Spike5 = GameObject.Find("Spike5");
+		InvisPuffer2 = GameObject.Find("InvisablePufferfish2");
+		InvisPuffer3 = GameObject.Find("InvisablePufferfish3");
+		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+	}
+
 	// Use this for initialization
 	void Start () {
 		Stop = false;
@@ -25,7 +47,7 @@ public class GameOver : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().Reseting == true)
+		if (Spike1.GetComponent<Spawn_loc1>().Reseting == true)
 		{
 			Stop = false;
 
@@ -33,9 +55,9 @@ public class GameOver : MonoBehaviour {
 
 
 		// Spike 1
-		if (GameObject.Find("Spike").GetComponent<Destroy_player>().GameOver == true)    
+		if (Spike1.GetComponent<Destroy_player>().GameOver == true)    
 		{
-		if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().Reseted == true)
+		if (Spike1.GetComponent<Spawn_loc1>().Reseted == true)
 		{
 			Chance2 = false;
 		}
@@ -45,18 +67,18 @@ public class GameOver : MonoBehaviour {
 		Invoke("ENDFALSE", 1);
 		}
 		//
-		if (GameObject.Find("Spike").GetComponent<Destroy_player>().GameOver == false)
+		if (Spike1.GetComponent<Destroy_player>().GameOver == false)
 		{
-			if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().Reseting == true)
+			if (Spike1.GetComponent<Spawn_loc1>().Reseting == true)
 			{
 				End = false;
 		//		Debug.Log("Restarting");
 			}
 		}
 		// Spike 2
-		if (GameObject.Find("Spike2").GetComponent<Destroy_player>().GameOver == true)
+		if (Spike2.GetComponent<Destroy_player>().GameOver == true)
 		{
-			if (GameObject.Find("Spike2").GetComponent<Spawn_loc1>().Reseted == true)
+			if (Spike2.GetComponent<Spawn_loc1>().Reseted == true)
 			{
 				Chance2 = false;
 
@@ -67,9 +89,9 @@ public class GameOver : MonoBehaviour {
 			Invoke("ENDFALSE", 1);
 		}
 		//
-		if (GameObject.Find("Spike2").GetComponent<Destroy_player>().GameOver == false)
+		if (Spike2.GetComponent<Destroy_player>().GameOver == false)
 		{
-			if (GameObject.Find("Spike2").GetComponent<Spawn_loc1>().Reseting == true)
+			if (Spike2.GetComponent<Spawn_loc1>().Reseting == true)
 			{
 				End = false;
 		//		Debug.Log("Restarting");
@@ -79,9 +101,9 @@ public class GameOver : MonoBehaviour {
 
 		}
 		//Spike 3
-		if (GameObject.Find("Spike3").GetComponent<Destroy_player>().GameOver == true)
+		if (Spike3.GetComponent<Destroy_player>().GameOver == true)
 		{
-			if (GameObject.Find("Spike3").GetComponent<Spawn_loc1>().Reseted == true)
+			if (Spike3.GetComponent<Spawn_loc1>().Reseted == true)
 			{
 				End = false;
 			}
@@ -90,9 +112,9 @@ public class GameOver : MonoBehaviour {
 			//Debug.Log("Ending Game");
 			Invoke("ENDFALSE", 1);
 			//
-			if (GameObject.Find("Spike3").GetComponent<Destroy_player>().GameOver == false)
+			if (Spike3.GetComponent<Destroy_player>().GameOver == false)
 			{
-				if (GameObject.Find("Spike3").GetComponent<Spawn_loc1>().Reseting == true)
+				if (Spike3.GetComponent<Spawn_loc1>().Reseting == true)
 				{
 					End = false;
 			//		Debug.Log("Restarting");
@@ -102,10 +124,10 @@ public class GameOver : MonoBehaviour {
 			}
 		}
 		//Spike 4
-		if (GameObject.Find("Spike4").GetComponent<Destroy_player>().GameOver == true)
+		if (Spike4.GetComponent<Destroy_player>().GameOver == true)
 		{
 
-			if (GameObject.Find("Spike4").GetComponent<Spawn_loc1>().Reseted == true)
+			if (Spike4.GetComponent<Spawn_loc1>().Reseted == true)
 			{
 				Chance2 = false;
 			}
@@ -114,9 +136,9 @@ public class GameOver : MonoBehaviour {
 		//	Debug.Log("Ending Game");
 			Invoke("ENDFALSE", 1);
 			//
-			if (GameObject.Find("Spike4").GetComponent<Destroy_player>().GameOver == false)
+			if (Spike4.GetComponent<Destroy_player>().GameOver == false)
 			{
-				if (GameObject.Find("Spike4").GetComponent<Spawn_loc1>().Reseting == true)
+				if (Spike4.GetComponent<Spawn_loc1>().Reseting == true)
 				{
 					End = false;
 		//			Debug.Log("Restarting");
@@ -125,9 +147,9 @@ public class GameOver : MonoBehaviour {
 			}
 		}
 		// Spike 5
-		if (GameObject.Find("Spike5").GetComponent<Destroy_player>().GameOver == true)
+		if (Spike5.GetComponent<Destroy_player>().GameOver == true)
 		{
-			if (GameObject.Find("Spike5").GetComponent<Spawn_loc1>().Reseted == true)
+			if (Spike5.GetComponent<Spawn_loc1>().Reseted == true)
 			{
 				Chance2 = false;
 			}
@@ -136,9 +158,9 @@ public class GameOver : MonoBehaviour {
 		//	Debug.Log("Ending Game");
 			Invoke("ENDFALSE", 2);
 			//
-			if (GameObject.Find("Spike5").GetComponent<Destroy_player>().GameOver == false)
+			if (Spike5.GetComponent<Destroy_player>().GameOver == false)
 			{
-				if (GameObject.Find("Spike5").GetComponent<Spawn_loc1>().Reseting == true)
+				if (Spike5.GetComponent<Spawn_loc1>().Reseting == true)
 				{
 					End = false;
 		//			Debug.Log("Restarting");
@@ -151,11 +173,11 @@ public class GameOver : MonoBehaviour {
 		//Normal
 		
 		//Original
-		if (GameObject.Find("InvisablePufferfish2").GetComponent<Difficulty>().Normal == true)
+		if (InvisPuffer2.GetComponent<Difficulty>().Normal == true)
 		{
-			if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 0)
+			if (InvisPuffer3.GetComponent<ChoseSkin>().CharacterPicked == 0)
 			{
-				if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Revived == true)
+				if (InvisPuffer5.GetComponent<Player_Start>().Revived == true)
 				{
 				Chance2 = true;
 				}
@@ -163,11 +185,11 @@ public class GameOver : MonoBehaviour {
 
 		}
 		//Cute
-		if (GameObject.Find("InvisablePufferfish2").GetComponent<Difficulty>().Normal == true)
+		if (InvisPuffer2.GetComponent<Difficulty>().Normal == true)
 		{
-			if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 1)
+			if (InvisPuffer3.GetComponent<ChoseSkin>().CharacterPicked == 1)
 			{
-				if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Revived == true)
+				if (InvisPuffer5.GetComponent<Player_Start>().Revived == true)
 				{
 					Chance2 = true;
 				}
@@ -176,11 +198,11 @@ public class GameOver : MonoBehaviour {
 		}
 		//Hard
 		//Original
-		if (GameObject.Find("InvisablePufferfish2").GetComponent<Difficulty>().Hard == true)
+		if (InvisPuffer2.GetComponent<Difficulty>().Hard == true)
 		{
-			if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 0)
+			if (InvisPuffer3.GetComponent<ChoseSkin>().CharacterPicked == 0)
 			{
-				if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Revived == true)
+				if (InvisPuffer5.GetComponent<Player_Start>().Revived == true)
 				{
 					Chance2 = true;
 				}
@@ -188,11 +210,11 @@ public class GameOver : MonoBehaviour {
 
 		}
 		//Cute
-		if (GameObject.Find("InvisablePufferfish2").GetComponent<Difficulty>().Hard == true)
+		if (InvisPuffer2.GetComponent<Difficulty>().Hard == true)
 		{
-			if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 1)
+			if (InvisPuffer3.GetComponent<ChoseSkin>().CharacterPicked == 1)
 			{
-				if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Revived == true)
+				if (InvisPuffer5.GetComponent<Player_Start>().Revived == true)
 				{
 					Chance2 = true;
 				}

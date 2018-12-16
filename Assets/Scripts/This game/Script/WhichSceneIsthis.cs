@@ -8,7 +8,7 @@ public class WhichSceneIsthis : MonoBehaviour {
 
 
 	public int Scene;
-	public string Beining, Char, StartS, Difficult, Main, Hard, WantEvent;
+	public string Beining, Char, StartS, Difficult, Main, Hard, WantEvent,OtherMenue;
 	Scene M_Scene;
 
 	// Use this for initialization
@@ -49,7 +49,10 @@ public class WhichSceneIsthis : MonoBehaviour {
 		{
 			Scene = 7;
 		}
-
+		if (M_Scene.name == OtherMenue)
+		{
+			Scene = 8;
+		}
 		//InvisablePufferfish6
 
 

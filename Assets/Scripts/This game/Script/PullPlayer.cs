@@ -7,10 +7,17 @@ public class PullPlayer : MonoBehaviour {
 	public GameObject This;
 	public float Velocity = -10f;
 
+	private GameObject InvisPuffer5;
+
+
+	private void Awake()
+	{
+		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+	}
 
 
 	// Use this for initialization
-	
+
 	void Start () {
 		This.transform.position = Player.transform.position;
 	}
@@ -22,7 +29,7 @@ public class PullPlayer : MonoBehaviour {
 	void FixedUpdate()
 	{
 		
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Dead == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Dead == true)
 		{
 		transform.Translate(Velocity * Time.deltaTime, 0, 0);
 		}

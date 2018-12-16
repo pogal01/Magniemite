@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WantEvent.unity
     guid: 4a22cfc224cd8cc44adbb943dc1fa9c2
+  - enabled: 1
+    path: Assets/Scenes/OtherMenue.unity
+    guid: bd195b8bc5d219445949053e4a95b4e4
   m_configObjects: {}

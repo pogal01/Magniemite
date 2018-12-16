@@ -11,6 +11,16 @@ public class Revived : MonoBehaviour {
 	public bool Reserect = false;
 
 
+
+	private GameObject InvisPuffer5;
+
+
+	private void Awake()
+	{
+		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+	}
+
+
 	// Use this for initialization
 	void Start () {
 		ReviveScreen.gameObject.SetActive(false);
@@ -31,7 +41,7 @@ public class Revived : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().ReviveScreen == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().ReviveScreen == true)
 		{
 			ReviveScreen.gameObject.SetActive(true);
 		}
@@ -40,7 +50,7 @@ public class Revived : MonoBehaviour {
 			ReviveScreen.gameObject.SetActive(false);
 		}
 		//
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().ADError == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().ADError == true)
 		{
 			AdErrorScreen.gameObject.SetActive(false);
 		}
@@ -49,7 +59,7 @@ public class Revived : MonoBehaviour {
 			AdErrorScreen.gameObject.SetActive(false);
 		}
 		//
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Skiped == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Skiped == true)
 		{
 			YouSkiped.gameObject.SetActive(true);
 		}

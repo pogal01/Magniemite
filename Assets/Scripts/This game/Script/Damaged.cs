@@ -6,7 +6,16 @@ public class Damaged : MonoBehaviour
 {
 	public bool Hit;
 	public float Velocity = -10f;
-	
+	private GameObject InvisPuffer5;
+	private GameObject Endwall;
+
+
+	void Awake()
+	{
+		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+		Endwall = GameObject.Find("EndWall");
+	}
+
 
 	// Use this for initialization
 	void Start()
@@ -23,13 +32,13 @@ public class Damaged : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Dead == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Dead == true)
 		{ 
 					//Input characters that don't need a pully puffer here
-			if(GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Char == 0)
+			if(InvisPuffer5.GetComponent<Player_Start>().Char == 0)
 			transform.Translate(Velocity * Time.deltaTime, 0, 0);
 
-			if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Char == 1)
+			if (InvisPuffer5.GetComponent<Player_Start>().Char == 1)
 				transform.Translate(Velocity * Time.deltaTime, 0, 0);
 
 
@@ -39,7 +48,7 @@ public class Damaged : MonoBehaviour
 
 		}
 
-		if (GameObject.Find("EndWall").GetComponent<Eliminate_Player>().DestroyPlayer == true)
+		if (Endwall.GetComponent<Eliminate_Player>().DestroyPlayer == true)
 		{
 			//Debug.Log("Destroyed the player");
 			

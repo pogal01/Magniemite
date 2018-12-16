@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
 
-public class Player_Start_Hard : MonoBehaviour
+public class Player_Start_Normal : MonoBehaviour
 {
 
 
@@ -13,9 +13,9 @@ public class Player_Start_Hard : MonoBehaviour
 	public GameObject Cute;
 	public GameObject Dragniemite;
 	public GameObject Magnieling;
+	public GameObject Start_pos;
 	public GameObject DeathScreen;
-
-	//Called Objects
+	//Called objects
 	private GameObject InvisablePufferfish5 = null;
 	private GameObject Spike1 = null;
 	private GameObject Spike2 = null;
@@ -23,7 +23,7 @@ public class Player_Start_Hard : MonoBehaviour
 	private GameObject Spike4 = null;
 	private GameObject Spike5 = null;
 	private GameObject EndWall = null;
-	//End of called objects
+	//Called objects end
 	public bool ReviveScreen = false;
 	public bool ADError = false;
 	public bool Skiped = false;
@@ -31,18 +31,32 @@ public class Player_Start_Hard : MonoBehaviour
 	public bool test;
 	public bool CanBeRevived = true;
 	public bool InternetConnecton = false;
-	public bool HardMode = true;
+	public bool NormalMode = true;
 	public bool Revived = false;
 	public bool hasbeenrevived = false;
 	public bool MagnieWalk = true;
+	static Animator animat;
 	// Use this for initialization
 	public Text Score;
 	private int score;
 	public Text ScoreOnDeath;
-	public Text HHighscore;
+	public Text Highscore;
 	public Text CurrentHighScore;
 
 
+	void RevivescreenF()
+	{
+
+	}
+
+	void ADErrorF()
+	{
+
+	}
+	void SkipedF()
+	{
+
+	}
 
 	void OriginalChar()
 	{
@@ -100,29 +114,28 @@ public class Player_Start_Hard : MonoBehaviour
 
 	void Character()
 	{
-		Debug.Log("Character function active");
+		
 		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 0)
 		{
 			OriginalChar();
-			Debug.Log("Original");
+			//Debug.Log("Original");
 		}
 		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 1)
 		{
 			Cutechar();
-			Debug.Log("Cute");
+			//Debug.Log("Cute");
 		}
 		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 2)
 		{
 			Dragniemitechar();
-			Debug.Log("Dragniemite");
+			//Debug.Log("Dragniemite");
 		}
 		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 3)
 		{
 			MagnielingChar();
-			Debug.Log("Magnieling");
+			//Debug.Log("Magnieling");
 		}
 	}
-
 
 	void AlimateChar()
 	{
@@ -132,12 +145,25 @@ public class Player_Start_Hard : MonoBehaviour
 
 	}
 
-	
+	void Awake()
+	{
+		//Finding objects
+		InvisablePufferfish5 = GameObject.Find("InvisablePufferfish5");
+		Spike1 = GameObject.Find("Spike");
+		Spike2 = GameObject.Find("Spike2");
+		Spike3 = GameObject.Find("Spike3");
+		Spike4 = GameObject.Find("Spike4");
+		Spike5 = GameObject.Find("Spike5");
+
+
+
+
+		EndWall = GameObject.Find("EndWall");
+	}
+
 
 	void Start()
 	{
-		//start of start
-
 		//Music
 		FindObjectOfType<AudioMannager>().Play("BackgroundMusic");
 		// Music End
@@ -145,8 +171,10 @@ public class Player_Start_Hard : MonoBehaviour
 		//Characters
 		Original.gameObject.SetActive(false);
 		Cute.gameObject.SetActive(false);
-
+		Dragniemite.gameObject.SetActive(false);
+		Magnieling.gameObject.SetActive(false);
 		//Characters end
+
 		AlimateChar();
 		score = 0;
 		SetScoreText();
@@ -154,11 +182,10 @@ public class Player_Start_Hard : MonoBehaviour
 		ReviveScreen = false;
 		ADError = false;
 		Skiped = false;
-		Dragniemite.gameObject.SetActive(false);
-		HHighscore.text = PlayerPrefs.GetInt("HHighscore", 0).ToString();
-		CurrentHighScore.text = PlayerPrefs.GetInt("HHighscore", 0).ToString();
+		Highscore.text = PlayerPrefs.GetInt("Highscore", 0).ToString();
+		CurrentHighScore.text = PlayerPrefs.GetInt("Highscore", 0).ToString();
 		CanBeRevived = true;
-		HardMode = true;
+		NormalMode = true;
 		Revived = false;
 		hasbeenrevived = false;
 		Character();
@@ -172,22 +199,9 @@ public class Player_Start_Hard : MonoBehaviour
 		{
 			InternetConnecton = true;
 		}
-		//Finding Gameobjects
-		InvisablePufferfish5 = GameObject.Find("InvisablePufferfish5");
-		Spike1 = GameObject.Find("Spike");
-		Spike2 = GameObject.Find("Spike2");
-		Spike3 = GameObject.Find("Spike3");
-		Spike4 = GameObject.Find("Spike4");
-		Spike5 = GameObject.Find("Spike5");
 
+	
 
-
-
-		EndWall = GameObject.Find("EndWall");
-
-
-
-		//End of start
 	}
 
 	void AdERROR()
@@ -270,7 +284,7 @@ public class Player_Start_Hard : MonoBehaviour
 		{
 
 			MagnieWalk = true;
-
+			
 		}
 
 		if (EndWall.GetComponent<GameOver>().End == true)
@@ -317,7 +331,7 @@ public class Player_Start_Hard : MonoBehaviour
 			SetScoreText();
 
 			// Spikes effects
-			if (Spike1.GetComponent<Spawn_loc1>().loc1 == true)
+			if(Spike1.GetComponent<Spawn_loc1>().loc1 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighestSpikepass");
 			}
@@ -456,6 +470,9 @@ public class Player_Start_Hard : MonoBehaviour
 			}
 
 		}
+
+
+
 	}
 
 	public void PlayerNotRevive()
@@ -470,9 +487,6 @@ public class Player_Start_Hard : MonoBehaviour
 		ADError = false;
 
 	}
-
-
-
 
 	public void Revive()
 	{
@@ -493,10 +507,10 @@ public class Player_Start_Hard : MonoBehaviour
 		DeathScreen.gameObject.SetActive(true);
 
 
-		if (score > PlayerPrefs.GetInt("HHighscore", 0))
+		if (score > PlayerPrefs.GetInt("Highscore", 0))
 		{
-			PlayerPrefs.SetInt("HHighscore", score);
-			HHighscore.text = score.ToString();
+			PlayerPrefs.SetInt("Highscore", score);
+			Highscore.text = score.ToString();
 		}
 		ADError = false;
 		ReviveScreen = false;

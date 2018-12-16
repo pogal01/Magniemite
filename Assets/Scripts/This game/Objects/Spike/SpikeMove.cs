@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class SpikeMove : MonoBehaviour {
 	public float Velocity;
-	
 
-	// Use this for initialization
-	void Start () {
-		
+	private GameObject Endwall;
+	
+	private void Awake()
+	{
+		Endwall = GameObject.Find("EndWall");
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if (GameObject.Find("EndWall").GetComponent<GameOver>().Stop == false)
+		if (Endwall.GetComponent<GameOver>().Stop == false)
 		{
 			transform.Translate(Velocity * Time.deltaTime, 0, 0);
 		}

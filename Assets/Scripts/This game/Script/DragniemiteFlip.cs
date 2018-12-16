@@ -11,6 +11,11 @@ public class DragniemiteFlip : MonoBehaviour
 	public bool FlipGrav;
 	// Use this for initialization
 	public bool Activite;
+
+	private GameObject InvisPuffer3;
+	private GameObject Endwall;
+	private GameObject Spike1;
+
 	void Start()
 	{
 		FlipGrav = false;
@@ -20,7 +25,13 @@ public class DragniemiteFlip : MonoBehaviour
 
 	}
 
+	private void Awake()
+	{
+		InvisPuffer3 = GameObject.Find("InvisablePufferfish3");
+		Endwall = GameObject.Find("EndWall");
+		Spike1 = GameObject.Find("Spike");
 
+	}
 
 	void FlipScript()
 	{
@@ -55,27 +66,9 @@ public class DragniemiteFlip : MonoBehaviour
 	void Update()
 	{
 
-		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 0)
+		if (InvisPuffer3.GetComponent<ChoseSkin>().CharacterPicked == 2)
 		{
-			if (GameObject.Find("Magneimite").GetComponent<Flip>().Activite == true)
-			{
-
-				FlipScript();
-
-			}
-		}
-		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 1)
-		{
-			if (GameObject.Find("Cute").GetComponent<RealFlip>().Activite == true)
-			{
-
-				FlipScript();
-
-			}
-		}
-		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 2)
-		{
-			if (GameObject.Find("Dragniemite").GetComponent<DragniemiteFlip>().Activite == true)
+			if (GetComponent<DragniemiteFlip>().Activite == true)
 			{
 
 				FlipScript();
@@ -83,22 +76,14 @@ public class DragniemiteFlip : MonoBehaviour
 			}
 		}
 
-		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 3)
-		{
-			if (GameObject.Find("Magnieling").GetComponent<DragniemiteFlip>().Activite == true)
-			{
+	
 
-				FlipScript();
-
-			}
-		}
-
-		if (GameObject.Find("EndWall").GetComponent<GameOver>().End == true)
+		if (Endwall.GetComponent<GameOver>().End == true)
 		{
 			Activite = false;
 		}
 
-		if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().Reseting == true)
+		if (Spike1.GetComponent<Spawn_loc1>().Reseting == true)
 		{
 			Activite = true;
 		}

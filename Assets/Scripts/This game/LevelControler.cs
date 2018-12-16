@@ -10,30 +10,35 @@ public class LevelControler : MonoBehaviour
 	public GameObject BackgroundC;
 
 
-
+	private GameObject EventPuffer;
 
 
 
 	// Use this for initialization
 
+	private void Awake()
+	{
+		EventPuffer = GameObject.Find("EventPuffer");
+	}
+
 	void Start()
 	{
-		if (GameObject.Find("EventPuffer").GetComponent<Events>().BEvents == false)
+		if (EventPuffer.GetComponent<Events>().BEvents == false)
 		{
 			BackgroundN.gameObject.SetActive(true);
 			BackgroundH.gameObject.SetActive(false);
 			BackgroundC.gameObject.SetActive(false);
 		}
 
-		if (GameObject.Find("EventPuffer").GetComponent<Events>().BEvents == true)
+		if (EventPuffer.GetComponent<Events>().BEvents == true)
 		{
-			if (GameObject.Find("EventPuffer").GetComponent<Events>().Halloween == true)
+			if (EventPuffer.GetComponent<Events>().Halloween == true)
 			{
 				BackgroundN.gameObject.SetActive(false);
 				BackgroundH.gameObject.SetActive(true);
 				BackgroundC.gameObject.SetActive(false);
 			}
-			else if (GameObject.Find("EventPuffer").GetComponent<Events>().Christmas == true)
+			else if (EventPuffer.GetComponent<Events>().Christmas == true)
 			{
 				BackgroundN.gameObject.SetActive(false);
 				BackgroundH.gameObject.SetActive(false);

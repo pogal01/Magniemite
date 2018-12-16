@@ -10,24 +10,31 @@ public class SpikeSkin : MonoBehaviour {
 	public GameObject Pumpkin;
 	public GameObject SnowFlake;
 
+	private GameObject EventPuffer;
+	private GameObject Spike1;
+
+	private void Awake()
+	{
+		EventPuffer = GameObject.Find("EventPuffer");
+		Spike1 = GameObject.Find("Spike");
 
 
-
+	}
 
 	// Use this for initialization
 	void Start ()
 	{
 
-		if (GameObject.Find("EventPuffer").GetComponent<Events>().BEvents == false)
+		if (EventPuffer.GetComponent<Events>().BEvents == false)
 		{
 			Normal = true;
 			DisableOtherSkins();
 
 		}
-		if (GameObject.Find("EventPuffer").GetComponent<Events>().BEvents == true)
+		if (EventPuffer.GetComponent<Events>().BEvents == true)
 		{
 			Normal = true;
-			if (GameObject.Find("EventPuffer").GetComponent<Events>().Halloween == true)
+			if (EventPuffer.GetComponent<Events>().Halloween == true)
 			{
 
 				Normal = false;
@@ -35,7 +42,7 @@ public class SpikeSkin : MonoBehaviour {
 				Christmas = false;
 
 			}
-			if (GameObject.Find("EventPuffer").GetComponent<Events>().Christmas == true)
+			if (EventPuffer.GetComponent<Events>().Christmas == true)
 			{
 
 				Normal = false;
@@ -52,7 +59,7 @@ public class SpikeSkin : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().SpriteActivation == true)
+		if (Spike1.GetComponent<Spawn_loc1>().SpriteActivation == true)
 		{ 
 			if (Halloween == true)
 			{

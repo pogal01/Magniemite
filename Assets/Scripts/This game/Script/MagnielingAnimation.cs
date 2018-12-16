@@ -6,14 +6,25 @@ public class MagnielingAnimation : MonoBehaviour
 {
 	public Animator Animator;
 
+
+
+	private GameObject MagnielingCol;
+	private GameObject InvisPuffer5;
+
 	/*Unused Code
 	Original walk = false;
 
 	col.collider2D.tag == "Ground"
 	*/
-	
+
 	// Walking alimation
 
+	private void Awake()
+	{
+		MagnielingCol = GameObject.Find("MaglingCollision");
+		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+
+	}
 
 	void Start()
 	{
@@ -26,7 +37,7 @@ public class MagnielingAnimation : MonoBehaviour
 	public void Walking ()
 	{
 		
-		if (GameObject.Find("MaglingCollision").GetComponent<GroundCheck>().Ground == true)
+		if (MagnielingCol.GetComponent<GroundCheck>().Ground == true)
 		{
 		AnimateW();
 		//Debug.Log("Ground");
@@ -97,17 +108,17 @@ public class MagnielingAnimation : MonoBehaviour
 
 
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().BeenHit == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().BeenHit == true)
 		{
 			AnimateHit();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Rez == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Rez == true)
 		{
 			AnimateRez();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Dead == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Dead == true)
 		{
 			StartDeathAlimation();
 		}
@@ -115,18 +126,18 @@ public class MagnielingAnimation : MonoBehaviour
 
 		//False
 	
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().BeenHit == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().BeenHit == false)
 		{
 			StopAnimateHit();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Rez == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().Rez == false)
 		{
 			StopAnimateRez();
 		}
 
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Dead == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().Dead == false)
 		{
 			StopDeathAlimation();
 		}

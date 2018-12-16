@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class Flip : MonoBehaviour
 {
-	
+	private GameObject PlayerGO;
+	private GameObject Endwall;
+	private GameObject Spike1;
 
 
+
+
+	private void Awake()
+	{
+		Endwall = GameObject.Find("EndWall");
+		Spike1 = GameObject.Find("Spike");
+
+
+	}
 
 	public bool FlipGrav;
 	SpriteRenderer SpriteRen;
@@ -57,52 +68,22 @@ public class Flip : MonoBehaviour
 	void Update()
 	{
 
-		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 0)
+	
+		if (GetComponent<Flip>().Activite == true)
 		{
-			if (GameObject.Find("Magneimite").GetComponent<Flip>().Activite == true)
-			{
-
-				FlipScript();
-
-			}
+			FlipScript();
 		}
-		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 1)
-		{
-			if (GameObject.Find("Cute").GetComponent<Flip>().Activite == true)
-			{
-
-				FlipScript();
-
-			}
-		}
-		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 2)
-		{
-			if (GameObject.Find("Dragniemite").GetComponent<Flip>().Activite == true)
-			{
-
-				FlipScript();
-
-			}
-		}
-
-		if (GameObject.Find("InvisablePufferfish3").GetComponent<ChoseSkin>().CharacterPicked == 3)
-		{
-			if (GameObject.Find("Magnieling").GetComponent<Flip>().Activite == true)
-			{
-
-				FlipScript();
-
-			}
-		}
+		
+		
 
 
 
-		if (GameObject.Find("EndWall").GetComponent<GameOver>().End == true)
+		if (Endwall.GetComponent<GameOver>().End == true)
 		{
 			Activite = false;
 		}
 
-		if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().Reseting == true)
+		if (Spike1.GetComponent<Spawn_loc1>().Reseting == true)
 		{
 			Activite = true;
 		}

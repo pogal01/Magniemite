@@ -17,6 +17,10 @@ public class Player_Start : MonoBehaviour
 	public GameObject Magnieling;
 	public GameObject Start_pos;
 	public GameObject DeathScreen;
+	//Called objects
+	private GameObject Spike1 = null;
+	private GameObject EndWall = null;
+	//Called objects end
 	public bool DeathScoreSet;
 	public bool ReviveScreen = false;
 	public bool ADError = false;
@@ -32,9 +36,21 @@ public class Player_Start : MonoBehaviour
 	public bool Dead = false;
 	public bool Rez = false;
 	public bool TriggrBackGround = false;
-	
+
 	// Use this for initialization
-	
+
+
+	private void Awake()
+	{
+		Spike1 = GameObject.Find("Spike");
+		EndWall = GameObject.Find("EndWall");
+
+
+
+
+
+
+	}
 
 	void RevivescreenF()
 	{
@@ -291,14 +307,14 @@ public class Player_Start : MonoBehaviour
 		//start of Update
 		CharacterHit();
 
-		if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().Reseting == true)
+		if (Spike1.GetComponent<Spawn_loc1>().Reseting == true)
 		{
 
 			MagnieWalk = true;
 
 		}
 
-		if (GameObject.Find("EndWall").GetComponent<GameOver>().End == true)
+		if (EndWall.GetComponent<GameOver>().End == true)
 		{
 			if (InternetConnecton == false)
 			{
@@ -322,7 +338,7 @@ public class Player_Start : MonoBehaviour
 		}
 		if (CanBeRevived == false)
 		{
-			if (GameObject.Find("EndWall").GetComponent<GameOver>().End == true)
+			if (EndWall.GetComponent<GameOver>().End == true)
 			{
 				ENDSecondLife();
 			}
@@ -332,7 +348,7 @@ public class Player_Start : MonoBehaviour
 			InternetConnecton = true;
 		}
 
-		if (GameObject.Find("EndWall").GetComponent<Eliminate_Player>().DestroyPlayer == true)
+		if (EndWall.GetComponent<Eliminate_Player>().DestroyPlayer == true)
 		{
 			Dead = false;
 			Invoke("SetDeathScore",1);

@@ -14,6 +14,13 @@ public class HatFallFlip : MonoBehaviour {
 	public GameObject HatPosAF;
 	public string PlayerS;
 
+	private GameObject InvisPuffer5;
+
+	private void Awake()
+	{
+		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+	}
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -32,7 +39,7 @@ public class HatFallFlip : MonoBehaviour {
 		}
 
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Rez == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Rez == true)
 		{
 			FixHat();
 		}

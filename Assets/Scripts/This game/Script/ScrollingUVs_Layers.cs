@@ -9,6 +9,15 @@ public class ScrollingUVs_Layers : MonoBehaviour
 	public string textureName = "_MainTex";
 	Vector2 uvOffset = Vector2.zero;
 
+	private GameObject Endwall;
+	private GameObject InvisPuff5;
+
+	private void Awake()
+	{
+		Endwall = GameObject.Find("EndWall");
+		InvisPuff5 = GameObject.Find("InvisablePufferfish5");
+	}
+
 	void Start()
 	{
 		scriptActive = true;
@@ -27,7 +36,7 @@ public class ScrollingUVs_Layers : MonoBehaviour
 		}
 
 
-		if (GameObject.Find("EndWall").GetComponent<GameOver>().End == true)
+		if (Endwall.GetComponent<GameOver>().End == true)
 		{
 			scriptActive = false;
 
@@ -35,7 +44,7 @@ public class ScrollingUVs_Layers : MonoBehaviour
 
 		
 	
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().TriggrBackGround == true)
+		if (InvisPuff5.GetComponent<Player_Start>().TriggrBackGround == true)
 		{
 			scriptActive = true;
 		}

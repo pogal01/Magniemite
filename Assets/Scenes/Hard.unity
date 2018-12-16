@@ -466,7 +466,7 @@ Prefab:
         type: 2}
       propertyPath: Magnieling
       value: 
-      objectReference: {fileID: 579259073}
+      objectReference: {fileID: 0}
     - target: {fileID: 114599802893467524, guid: d6ecef6d8d9aabc4a8878dd31e8161c0,
         type: 2}
       propertyPath: Start_pos
@@ -506,6 +506,146 @@ Prefab:
     - {fileID: 114599802893467524, guid: d6ecef6d8d9aabc4a8878dd31e8161c0, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: d6ecef6d8d9aabc4a8878dd31e8161c0, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &223191810
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -32.310005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.1606941
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.0022640803
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999744
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
+        type: 2}
+      propertyPath: Original
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
+        type: 2}
+      propertyPath: Cute
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
+        type: 2}
+      propertyPath: Dragniemite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
+        type: 2}
+      propertyPath: Start_pos
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
+        type: 2}
+      propertyPath: DeathScreen
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
+        type: 2}
+      propertyPath: Score
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
+        type: 2}
+      propertyPath: ScoreOnDeath
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
+        type: 2}
+      propertyPath: Highscore
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
+        type: 2}
+      propertyPath: CurrentHighScore
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114450858034163546, guid: c59bccf4b745ade4dad94dfd90d71648,
+        type: 2}
+      propertyPath: Start_pos
+      value: 
+      objectReference: {fileID: 1768193117}
+    - target: {fileID: 114132357893872038, guid: c59bccf4b745ade4dad94dfd90d71648,
+        type: 2}
+      propertyPath: Start_pos
+      value: 
+      objectReference: {fileID: 1768193117}
+    m_RemovedComponents:
+    - {fileID: 114043965828644358, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
+    - {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &223191811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1764321696967264, guid: c59bccf4b745ade4dad94dfd90d71648,
+    type: 2}
+  m_PrefabInternal: {fileID: 223191810}
+--- !u!1 &223191812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1468129082302888, guid: c59bccf4b745ade4dad94dfd90d71648,
+    type: 2}
+  m_PrefabInternal: {fileID: 223191810}
+--- !u!114 &223191813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223191812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9d0f40643a3e9418f882d8853b99bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Original: {fileID: 433487629}
+  Cute: {fileID: 422636488}
+  Dragniemite: {fileID: 1793236465}
+  Magnieling: {fileID: 223191811}
+  DeathScreen: {fileID: 256884411}
+  ReviveScreen: 0
+  ADError: 0
+  Skiped: 0
+  Char: 0
+  test: 0
+  CanBeRevived: 1
+  InternetConnecton: 0
+  HardMode: 1
+  Revived: 0
+  hasbeenrevived: 0
+  MagnieWalk: 1
+  Score: {fileID: 1189632589}
+  ScoreOnDeath: {fileID: 1713146427}
+  HHighscore: {fileID: 1846588684}
+  CurrentHighScore: {fileID: 2018651626}
 --- !u!1 &256884411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1472060629471792, guid: 615ac5117e08c6d43ae5c41371384fc2,
@@ -572,7 +712,7 @@ MonoBehaviour:
   Original: {fileID: 433487629}
   Cute: {fileID: 422636488}
   Dragniemite: {fileID: 1793236465}
-  Magnieling: {fileID: 579259073}
+  Magnieling: {fileID: 223191811}
   DeathScreen: {fileID: 256884411}
   ReviveScreen: 0
   ADError: 0
@@ -608,7 +748,7 @@ MonoBehaviour:
   Original: {fileID: 433487629}
   Cute: {fileID: 422636488}
   Dragniemite: {fileID: 1793236465}
-  Magnieling: {fileID: 579259073}
+  Magnieling: {fileID: 223191811}
   DeathScreen: {fileID: 256884411}
   ReviveScreen: 0
   ADError: 0
@@ -729,47 +869,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1693529081691738, guid: 615ac5117e08c6d43ae5c41371384fc2,
     type: 2}
   m_PrefabInternal: {fileID: 617504955}
---- !u!1 &579259073 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1764321696967264, guid: c59bccf4b745ade4dad94dfd90d71648,
-    type: 2}
-  m_PrefabInternal: {fileID: 1696118879}
---- !u!1 &594252812 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1474478414500390, guid: c59bccf4b745ade4dad94dfd90d71648,
-    type: 2}
-  m_PrefabInternal: {fileID: 1696118879}
---- !u!114 &594252813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 594252812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b9d0f40643a3e9418f882d8853b99bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Original: {fileID: 433487629}
-  Cute: {fileID: 422636488}
-  Dragniemite: {fileID: 1793236465}
-  Magnieling: {fileID: 579259073}
-  DeathScreen: {fileID: 256884411}
-  ReviveScreen: 0
-  ADError: 0
-  Skiped: 0
-  Char: 0
-  test: 0
-  CanBeRevived: 1
-  InternetConnecton: 0
-  HardMode: 1
-  Revived: 0
-  hasbeenrevived: 0
-  MagnieWalk: 1
-  Score: {fileID: 1189632589}
-  ScoreOnDeath: {fileID: 1713146427}
-  HHighscore: {fileID: 1846588684}
-  CurrentHighScore: {fileID: 2018651626}
 --- !u!1001 &607519656
 Prefab:
   m_ObjectHideFlags: 0
@@ -1073,6 +1172,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1242063986}
+    - target: {fileID: 114634693814551404, guid: 615ac5117e08c6d43ae5c41371384fc2,
+        type: 2}
+      propertyPath: m_Text
+      value: Hard High Score
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 615ac5117e08c6d43ae5c41371384fc2, type: 2}
   m_IsPrefabAsset: 0
@@ -1144,7 +1248,7 @@ Prefab:
         type: 2}
       propertyPath: Magnieling
       value: 
-      objectReference: {fileID: 579259073}
+      objectReference: {fileID: 223191811}
     - target: {fileID: 114797660889285038, guid: b39ff06386567f347aa8b5c7d313eb83,
         type: 2}
       propertyPath: Start_pos
@@ -1210,11 +1314,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 843621281}
   m_Script: {fileID: 11500000, guid: d477f91c804b9024bbe3ee96d463b9ff, type: 3}
---- !u!1 &1279384763 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1114588473415798, guid: b84b6f1a4dca13a4eb7b662d16fe2120,
-    type: 2}
-  m_PrefabInternal: {fileID: 1768193116}
 --- !u!1 &1371666482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1576829611334056, guid: 615ac5117e08c6d43ae5c41371384fc2,
@@ -1410,7 +1509,7 @@ MonoBehaviour:
   Original: {fileID: 433487629}
   Cute: {fileID: 422636488}
   Dragniemite: {fileID: 1793236465}
-  Magnieling: {fileID: 579259073}
+  Magnieling: {fileID: 0}
   Start_pos: {fileID: 2139932936}
   DeathScreen: {fileID: 256884411}
   ReviveScreen: 0
@@ -1530,103 +1629,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1050159977192684, guid: b84b6f1a4dca13a4eb7b662d16fe2120,
     type: 2}
   m_PrefabInternal: {fileID: 1768193116}
---- !u!1001 &1696118879
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -32.310005
-      objectReference: {fileID: 0}
-    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.1606941
-      objectReference: {fileID: 0}
-    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.0022640803
-      objectReference: {fileID: 0}
-    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.99999744
-      objectReference: {fileID: 0}
-    - target: {fileID: 4441263486170102, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
-        type: 2}
-      propertyPath: Original
-      value: 
-      objectReference: {fileID: 433487629}
-    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
-        type: 2}
-      propertyPath: Cute
-      value: 
-      objectReference: {fileID: 422636488}
-    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
-        type: 2}
-      propertyPath: Dragniemite
-      value: 
-      objectReference: {fileID: 1793236465}
-    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
-        type: 2}
-      propertyPath: Start_pos
-      value: 
-      objectReference: {fileID: 2139932936}
-    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
-        type: 2}
-      propertyPath: DeathScreen
-      value: 
-      objectReference: {fileID: 256884411}
-    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
-        type: 2}
-      propertyPath: Score
-      value: 
-      objectReference: {fileID: 1189632589}
-    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
-        type: 2}
-      propertyPath: ScoreOnDeath
-      value: 
-      objectReference: {fileID: 1713146427}
-    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
-        type: 2}
-      propertyPath: Highscore
-      value: 
-      objectReference: {fileID: 1846588684}
-    - target: {fileID: 114348604950558790, guid: c59bccf4b745ade4dad94dfd90d71648,
-        type: 2}
-      propertyPath: CurrentHighScore
-      value: 
-      objectReference: {fileID: 2018651626}
-    - target: {fileID: 114450858034163546, guid: c59bccf4b745ade4dad94dfd90d71648,
-        type: 2}
-      propertyPath: Start_pos
-      value: 
-      objectReference: {fileID: 1279384763}
-    - target: {fileID: 114132357893872038, guid: c59bccf4b745ade4dad94dfd90d71648,
-        type: 2}
-      propertyPath: Start_pos
-      value: 
-      objectReference: {fileID: 1279384763}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!114 &1713146427 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114050974453526540, guid: 615ac5117e08c6d43ae5c41371384fc2,
@@ -1691,7 +1693,7 @@ Prefab:
         type: 2}
       propertyPath: Magnieling
       value: 
-      objectReference: {fileID: 579259073}
+      objectReference: {fileID: 0}
     - target: {fileID: 114465058376465720, guid: 7e67d6fdf4b1f6e45bf955b642b5456d,
         type: 2}
       propertyPath: Start_pos
@@ -1722,6 +1724,11 @@ Prefab:
       propertyPath: CurrentHighScore
       value: 
       objectReference: {fileID: 2018651626}
+    - target: {fileID: 114930861438591390, guid: 7e67d6fdf4b1f6e45bf955b642b5456d,
+        type: 2}
+      propertyPath: PlayerS
+      value: Magneimite
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114465058376465720, guid: 7e67d6fdf4b1f6e45bf955b642b5456d, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 7e67d6fdf4b1f6e45bf955b642b5456d, type: 2}
@@ -1768,6 +1775,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b84b6f1a4dca13a4eb7b662d16fe2120, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1768193117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1114588473415798, guid: b84b6f1a4dca13a4eb7b662d16fe2120,
+    type: 2}
+  m_PrefabInternal: {fileID: 1768193116}
 --- !u!1 &1793236465 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1039938388172994, guid: edf19af5dc3dfd84fa3006455dfe1ad7,
@@ -1874,7 +1886,7 @@ Prefab:
         type: 2}
       propertyPath: Magnieling
       value: 
-      objectReference: {fileID: 594252812}
+      objectReference: {fileID: 0}
     - target: {fileID: 114341173410997504, guid: edf19af5dc3dfd84fa3006455dfe1ad7,
         type: 2}
       propertyPath: Start_pos
@@ -1938,7 +1950,7 @@ MonoBehaviour:
   Original: {fileID: 433487629}
   Cute: {fileID: 422636488}
   Dragniemite: {fileID: 1793236465}
-  Magnieling: {fileID: 579259073}
+  Magnieling: {fileID: 223191811}
   DeathScreen: {fileID: 256884411}
   ReviveScreen: 0
   ADError: 0

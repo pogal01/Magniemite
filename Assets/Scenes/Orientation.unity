@@ -680,6 +680,11 @@ Prefab:
       propertyPath: WantEvent
       value: WantEvent
       objectReference: {fileID: 0}
+    - target: {fileID: 114458794853133682, guid: a81372b518496da4383233615ac190c6,
+        type: 2}
+      propertyPath: OtherMenue
+      value: OtherMenue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a81372b518496da4383233615ac190c6, type: 2}
   m_IsPrefabAsset: 0

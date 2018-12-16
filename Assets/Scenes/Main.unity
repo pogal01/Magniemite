@@ -360,7 +360,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: bb9ffe2be9f55be48827ca5cf3a376df, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 2
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -1217,6 +1217,81 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 95756265598523266, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95490282558682010, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95230221466701282, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95384753967138910, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95688077146545788, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95973299860285186, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95348690702488144, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95770741887385676, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95457259660827854, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95173506451918274, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95608486214199392, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95316244388014966, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95725465295187502, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95796901503595272, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 95315629171767546, guid: 5a40a3a5dd45946459319c711b99c8b2,
+        type: 2}
+      propertyPath: m_CullingMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a40a3a5dd45946459319c711b99c8b2, type: 2}
   m_IsPrefabAsset: 0
@@ -1510,7 +1585,8 @@ Prefab:
       propertyPath: Start_pos
       value: 
       objectReference: {fileID: 1279384763}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114043965828644358, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: c59bccf4b745ade4dad94dfd90d71648, type: 2}
   m_IsPrefabAsset: 0
 --- !u!114 &1713146427 stripped

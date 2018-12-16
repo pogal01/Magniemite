@@ -11,6 +11,15 @@ public class MagnielingFlip : MonoBehaviour
 	public bool FlipGrav;
 	// Use this for initialization
 	public bool Activite;
+
+	private GameObject Endwall;
+	private GameObject Spike1;
+
+	private void Awake()
+	{
+		Endwall = GameObject.Find("EndWall");
+		Spike1 = GameObject.Find("Spike");
+	}
 	void Start()
 	{
 		FlipGrav = false;
@@ -68,12 +77,12 @@ public class MagnielingFlip : MonoBehaviour
 			FlipScript();
 		}
 
-		if (GameObject.Find("EndWall").GetComponent<GameOver>().End == true)
+		if (Endwall.GetComponent<GameOver>().End == true)
 		{
 			Activite = false;
 		}
 
-		if (GameObject.Find("Spike").GetComponent<Spawn_loc1>().Reseting == true)
+		if (Spike1.GetComponent<Spawn_loc1>().Reseting == true)
 		{
 			Activite = true;
 		}

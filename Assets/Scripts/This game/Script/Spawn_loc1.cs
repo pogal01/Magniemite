@@ -21,6 +21,15 @@ public class Spawn_loc1 : MonoBehaviour
 	public bool Reseted = false;
 	public bool Script = true;
 
+	private GameObject Endwall;
+	private GameObject InvisPuffer5;
+
+
+	private void Awake()
+	{
+		Endwall = GameObject.Find("EndWall");
+		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+	}
 
 	// Use this for initialization
 	void Start()
@@ -146,7 +155,7 @@ public class Spawn_loc1 : MonoBehaviour
 
 	void Update()
 	{
-		if (GameObject.Find("EndWall").GetComponent<GameOver>().End == true)
+		if (Endwall.GetComponent<GameOver>().End == true)
 		{
 			SpikeSpawn();
 			//Debug.Log("Destroyed spike 1");
@@ -156,7 +165,7 @@ public class Spawn_loc1 : MonoBehaviour
 		}
 		//Normal
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Revived == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Revived == true)
 		{
 			ResetSpikes();
 		}

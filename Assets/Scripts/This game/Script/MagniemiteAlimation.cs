@@ -5,25 +5,33 @@ using UnityEngine;
 public class MagniemiteAlimation : MonoBehaviour
 {
 	public Animator Animator;
-	
+	private GameObject Magniemite;
+	private GameObject InvisPuffer5;
 	/*Unused Code
 	Original walk = false;
 	*/
 
 	// Walking alimation
 
-
-		void Start()
+		private void Awake()
 		{
-		StopAnimateHit();
-		StopAnimateRez();
-		StopDeathAlimation();
+		Magniemite = GameObject.Find("Magneimite");
+		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
 
+
+		}
+
+
+	void Start()
+	{
+	StopAnimateHit();
+	StopAnimateRez();
+	StopDeathAlimation();
 	}
 
 	void Walk()
 	{
-		if (GameObject.Find("Magneimite").GetComponent<CeliingGroundCheck>().Grounded == true)
+		if (Magniemite.GetComponent<CeliingGroundCheck>().Grounded == true)
 		{
 			AnimateW();
 			//Debug.Log("Ground");
@@ -95,17 +103,17 @@ public class MagniemiteAlimation : MonoBehaviour
 	
 
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().BeenHit == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().BeenHit == true)
 		{
 			AnimateHit();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Rez == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Rez == true)
 		{
 			AnimateRez();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Dead == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Dead == true)
 		{
 			StartDeathAlimation();
 		}
@@ -114,18 +122,18 @@ public class MagniemiteAlimation : MonoBehaviour
 		//False
 
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().BeenHit == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().BeenHit == false)
 		{
 			StopAnimateHit();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Rez == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().Rez == false)
 		{
 			StopAnimateRez();
 		}
 
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Dead == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().Dead == false)
 		{
 			StopDeathAlimation();
 		}

@@ -6,6 +6,7 @@ public class SeparateWalkingAnimation : MonoBehaviour
 {
 	public Animator Animator;
 
+	private GameObject MagnilingCol;
 	/*Unused Code
 	Original walk = false;
 
@@ -14,7 +15,10 @@ public class SeparateWalkingAnimation : MonoBehaviour
 
 	// Walking alimation
 
-
+		private void Awake()
+		{
+		MagnilingCol = GameObject.Find("MaglingCollision");
+		}
 	void Start()
 	{
 		
@@ -24,7 +28,7 @@ public class SeparateWalkingAnimation : MonoBehaviour
 	public void Walking()
 	{
 
-		if (GameObject.Find("MaglingCollision").GetComponent<GroundCheck>().Ground == true)
+		if (MagnilingCol.GetComponent<GroundCheck>().Ground == true)
 		{
 			AnimateW();
 			//Debug.Log("Ground");

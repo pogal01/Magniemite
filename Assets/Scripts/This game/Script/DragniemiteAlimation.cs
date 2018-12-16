@@ -6,13 +6,18 @@ public class DragniemiteAlimation : MonoBehaviour
 {
 	public Animator Animator;
 
+	private GameObject InvisPuffer5;
+
 	/*Unused Code
 	Original walk = false;
 	*/
 
 	// Walking alimation
 
-
+	private void Awake()
+	{
+		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+	}
 	void Start()
 	{
 		AnimateF();
@@ -82,53 +87,53 @@ public class DragniemiteAlimation : MonoBehaviour
 		//True
 
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().MagnieWalk == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().MagnieWalk == true)
 		{
 			AnimateF();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().MagnieWalk == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().MagnieWalk == true)
 		{
 			AnimateF();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().BeenHit == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().BeenHit == true)
 		{
 			AnimateHit();
 
 			//FindObjectOfType<AudioMannager>().Play("Hit");
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Rez == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Rez == true)
 		{
 			AnimateRez();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Dead == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Dead == true)
 		{
 			StartDeathAlimation();
 		}
 
 
 		//False
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().MagnieWalk == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().MagnieWalk == false)
 		{
 			AnimateFfalse();
 		}
 
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().BeenHit == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().BeenHit == false)
 		{
 			StopAnimateHit();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Rez == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().Rez == false)
 		{
 			StopAnimateRez();
 		}
 
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Dead == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().Dead == false)
 		{
 			StopDeathAlimation();
 		}

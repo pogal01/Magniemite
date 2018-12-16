@@ -7,12 +7,20 @@ public class CutiemiteAlimation : MonoBehaviour
 	public Animator Animator;
 
 
+	private GameObject InvisPuffer5;
+	
+
 	/*Unused Code
 	Original walk = false;
 	*/
 
 	// Walking alimation
 
+
+	private void Awake()
+	{
+		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+	}
 
 	void Start()
 	{
@@ -26,7 +34,7 @@ public class CutiemiteAlimation : MonoBehaviour
 	{
 
 
-		if (GameObject.Find("Cute" ).GetComponent<CeliingGroundCheck>().Grounded == true)
+		if(GetComponent<CeliingGroundCheck>().Grounded == true)
 		{
 			AnimateW();
 			//Debug.Log("Ground");
@@ -100,17 +108,17 @@ public class CutiemiteAlimation : MonoBehaviour
 
 
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().BeenHit == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().BeenHit == true)
 		{
 			AnimateHit();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Rez == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Rez == true)
 		{
 			AnimateRez();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Dead == true)
+		if (InvisPuffer5.GetComponent<Player_Start>().Dead == true)
 		{
 			StartDeathAlimation();
 		}
@@ -119,18 +127,18 @@ public class CutiemiteAlimation : MonoBehaviour
 		//False
 		
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().BeenHit == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().BeenHit == false)
 		{
 			StopAnimateHit();
 		}
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Rez == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().Rez == false)
 		{
 			StopAnimateRez();
 		}
 
 
-		if (GameObject.Find("InvisablePufferfish5").GetComponent<Player_Start>().Dead == false)
+		if (InvisPuffer5.GetComponent<Player_Start>().Dead == false)
 		{
 			StopDeathAlimation();
 		}
