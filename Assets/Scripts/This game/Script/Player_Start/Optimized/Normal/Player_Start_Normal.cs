@@ -323,6 +323,7 @@ public class Player_Start_Normal : MonoBehaviour
 		}
 	}
 
+
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.tag == "SpikeHit")
@@ -330,6 +331,7 @@ public class Player_Start_Normal : MonoBehaviour
 			score = score + 1;
 			SetScoreText();
 
+			/*
 			// Spikes effects
 			if(Spike1.GetComponent<Spawn_loc1>().loc1 == true)
 			{
@@ -351,7 +353,7 @@ public class Player_Start_Normal : MonoBehaviour
 			{
 				FindObjectOfType<AudioMannager>().Play("LowestSpikepass");
 			}
-
+			*/
 		}
 
 		if (other.tag == "SpikeHit2")
@@ -360,7 +362,7 @@ public class Player_Start_Normal : MonoBehaviour
 			SetScoreText();
 
 			// Spikes effects
-
+			/*
 			if (Spike2.GetComponent<Spawn_loc1>().loc1 == true)
 			{
 				FindObjectOfType<AudioMannager>().Play("HighestSpikepass");
@@ -381,7 +383,7 @@ public class Player_Start_Normal : MonoBehaviour
 			{
 				FindObjectOfType<AudioMannager>().Play("LowestSpikepass");
 			}
-
+			*/
 		}
 
 		if (other.tag == "SpikeHit3")
@@ -389,6 +391,7 @@ public class Player_Start_Normal : MonoBehaviour
 			score = score + 1;
 			SetScoreText();
 
+			/*
 			// Spikes effects
 			if (Spike3.GetComponent<Spawn_loc1>().loc1 == true)
 			{
@@ -410,14 +413,15 @@ public class Player_Start_Normal : MonoBehaviour
 			{
 				FindObjectOfType<AudioMannager>().Play("LowestSpikepass");
 			}
-
+			*/
 		}
 
 		if (other.tag == "SpikeHit4")
 		{
 			score = score + 1;
 			SetScoreText();
-
+			
+			/*
 			// Spikes effects
 			if (Spike4.GetComponent<Spawn_loc1>().loc1 == true)
 			{
@@ -439,7 +443,7 @@ public class Player_Start_Normal : MonoBehaviour
 			{
 				FindObjectOfType<AudioMannager>().Play("LowestSpikepass");
 			}
-
+			*/
 		}
 
 		if (other.tag == "SpikeHit5")
@@ -447,6 +451,7 @@ public class Player_Start_Normal : MonoBehaviour
 			score = score + 1;
 			SetScoreText();
 
+			/*
 			// Spikes effects
 			if (Spike5.GetComponent<Spawn_loc1>().loc1 == true)
 			{
@@ -468,7 +473,7 @@ public class Player_Start_Normal : MonoBehaviour
 			{
 				FindObjectOfType<AudioMannager>().Play("LowestSpikepass");
 			}
-
+			*/
 		}
 
 
