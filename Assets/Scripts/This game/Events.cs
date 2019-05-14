@@ -6,10 +6,17 @@ public class Events : MonoBehaviour {
 
 	public int PickEvent;
 	public int ActiveEvent;
+	public int ChosenEvent = 0;
 	public bool Halloween = false;
 	public bool Christmas = false;
+	public bool Easter= false;
+	
+
+
+	private GameObject SmartPuffer;
+	private GameObject InvisablePufferfish6;
 	//public bool EChristmas;
-	//public bool Easter;
+
 	public bool BEvents;
 	//public bool Activate;
 
@@ -17,7 +24,7 @@ public class Events : MonoBehaviour {
 	{
 		DontDestroyOnLoad(this.gameObject);
 		Debug.Log("Awake:" + this.gameObject);
-
+		InvisablePufferfish6 = GameObject.Find("InvisablePufferfish6");
 	}
 
 
@@ -26,12 +33,43 @@ public class Events : MonoBehaviour {
 	void Start () {
 		ActiveEvent = PlayerPrefs.GetInt("Event", 1);
 		PickEvent = PlayerPrefs.GetInt("Event", 1);
+		ChosenEvent = PlayerPrefs.GetInt("Events", 1);
 	}
 	
+
+
+
 	// Update is called once per frame
 	void Update ()
 	{
-		if(PickEvent == 1)
+		if (InvisablePufferfish6.GetComponent<WhichSceneIsthis>().Scene == 7)
+		{
+			SmartPuffer = GameObject.Find("SmartPuffer");
+			
+			
+
+			if (SmartPuffer.GetComponent<SelectedEvent>().SelectedEventS == 1)
+			{
+				ChosenEvent = 1;
+				//Debug.Log("H");
+			
+			
+			}
+			else if (SmartPuffer.GetComponent<SelectedEvent>().SelectedEventS == 2)
+			{
+				ChosenEvent = 2;
+				//Debug.Log("C");
+			
+			}
+			else if (SmartPuffer.GetComponent<SelectedEvent>().SelectedEventS == 3)
+			{
+				ChosenEvent = 3;
+				//Debug.Log("E");
+				
+			}
+		}
+
+		if (PickEvent == 1)
 		{
 			BEvents = true;
 		}
@@ -39,8 +77,31 @@ public class Events : MonoBehaviour {
 		{
 			BEvents = false;
 		}
-
-
+		// would need a event to be added
+		if (ChosenEvent == 0)
+		{
+			Halloween = false;
+			Christmas = false;
+			Easter = false;
+		}
+		else if (ChosenEvent == 1)
+		{
+			Halloween = true;
+			Christmas = false;
+			Easter = false;
+		}
+		else if (ChosenEvent == 2)
+		{
+			Halloween = false;
+			Christmas = true;
+			Easter = false;
+		}
+		else if (ChosenEvent == 3)
+		{
+			Halloween = false;
+			Christmas = false;
+			Easter = true;
+		}
 
 		if (GameObject.Find("InvisablePufferfish6").GetComponent<WhichSceneIsthis>().Scene == 7)
 		{

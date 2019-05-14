@@ -21,7 +21,7 @@ public class Play : MonoBehaviour
 	public void InsaneMode()
 	{
 		Debug.Log("Insanemode activated");
-
+		// Not implemented yet
 
 	}
 

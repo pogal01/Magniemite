@@ -6,9 +6,11 @@ public class SpikeSkin : MonoBehaviour {
 	public bool Normal;
 	public bool Halloween;   // Add other events here
 	public bool Christmas;
+	public bool Easter;
 	public GameObject Spike;
 	public GameObject Pumpkin;
 	public GameObject SnowFlake;
+	public GameObject Easteregg;
 
 	private GameObject EventPuffer;
 	private GameObject Spike1;
@@ -40,6 +42,7 @@ public class SpikeSkin : MonoBehaviour {
 				Normal = false;
 				Halloween = true;
 				Christmas = false;
+				Easter = false;
 
 			}
 			if (EventPuffer.GetComponent<Events>().Christmas == true)
@@ -48,6 +51,16 @@ public class SpikeSkin : MonoBehaviour {
 				Normal = false;
 				Halloween = false;
 				Christmas = true;
+				Easter = false;
+
+			}
+			if (EventPuffer.GetComponent<Events>().Easter == true)
+			{
+
+				Normal = false;
+				Halloween = false;
+				Christmas = false;
+				Easter = true;
 
 			}
 		}
@@ -63,16 +76,18 @@ public class SpikeSkin : MonoBehaviour {
 		{ 
 			if (Halloween == true)
 			{
-			Pumpkin.gameObject.SetActive(true);
-			Spike.gameObject.SetActive(false);
-			SnowFlake.gameObject.SetActive(false);
+				Pumpkin.gameObject.SetActive(true);
+				Spike.gameObject.SetActive(false);
+				SnowFlake.gameObject.SetActive(false);
+				Easteregg.gameObject.SetActive(false);
 			}
 
 			if (Normal == true)
 			{
-			Pumpkin.gameObject.SetActive(false);
-			Spike.gameObject.SetActive(true);
-			SnowFlake.gameObject.SetActive(false);
+				Pumpkin.gameObject.SetActive(false);
+				Spike.gameObject.SetActive(true);
+				SnowFlake.gameObject.SetActive(false);
+				Easteregg.gameObject.SetActive(false);
 			}
 
 			if (Christmas == true)
@@ -80,6 +95,16 @@ public class SpikeSkin : MonoBehaviour {
 				Pumpkin.gameObject.SetActive(false);
 				Spike.gameObject.SetActive(false);
 				SnowFlake.gameObject.SetActive(true);
+				Easteregg.gameObject.SetActive(false);
+			}
+			
+			if(Easter == true)
+			{
+				Pumpkin.gameObject.SetActive(false);
+				Spike.gameObject.SetActive(false);
+				SnowFlake.gameObject.SetActive(false);
+				Easteregg.gameObject.SetActive(true);
+
 			}
 		}
 		else
@@ -87,6 +112,7 @@ public class SpikeSkin : MonoBehaviour {
 			Pumpkin.gameObject.SetActive(false);
 			Spike.gameObject.SetActive(true);
 			SnowFlake.gameObject.SetActive(false);
+			Easteregg.gameObject.SetActive(false);
 		}
 	}
 
@@ -94,6 +120,7 @@ public class SpikeSkin : MonoBehaviour {
 	{
 		Halloween = false;
 		Christmas = false;
+		Easter = false; 
 	}
 
 

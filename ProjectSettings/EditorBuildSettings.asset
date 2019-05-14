@@ -22,7 +22,7 @@ EditorBuildSettings:
     guid: 5dc8f69c20fdcb94897f0c4ad4d61832
   - enabled: 1
     path: Assets/Scenes/Hard.unity
-    guid: b19439a24913543489b72d9af02c7b3c
+    guid: e6824d6f86ec3d043a7299c460eac802
   - enabled: 1
     path: Assets/Scenes/ChoseEvent.unity
     guid: 1609aea448e8d8245a27ca4d4c9751af

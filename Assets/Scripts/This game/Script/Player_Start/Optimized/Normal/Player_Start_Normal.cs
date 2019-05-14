@@ -18,10 +18,10 @@ public class Player_Start_Normal : MonoBehaviour
 	//Called objects
 	private GameObject InvisablePufferfish5 = null;
 	private GameObject Spike1 = null;
-	private GameObject Spike2 = null;
-	private GameObject Spike3 = null;
-	private GameObject Spike4 = null;
-	private GameObject Spike5 = null;
+	//private GameObject Spike2 = null;
+	//private GameObject Spike3 = null;
+	//private GameObject Spike4 = null;
+	//private GameObject Spike5 = null;
 	private GameObject EndWall = null;
 	//Called objects end
 	public bool ReviveScreen = false;
@@ -150,10 +150,10 @@ public class Player_Start_Normal : MonoBehaviour
 		//Finding objects
 		InvisablePufferfish5 = GameObject.Find("InvisablePufferfish5");
 		Spike1 = GameObject.Find("Spike");
-		Spike2 = GameObject.Find("Spike2");
-		Spike3 = GameObject.Find("Spike3");
-		Spike4 = GameObject.Find("Spike4");
-		Spike5 = GameObject.Find("Spike5");
+		//Spike2 = GameObject.Find("Spike2");
+		//Spike3 = GameObject.Find("Spike3");
+		//Spike4 = GameObject.Find("Spike4");
+		//Spike5 = GameObject.Find("Spike5");
 
 
 

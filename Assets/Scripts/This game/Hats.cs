@@ -7,22 +7,67 @@ public class Hats : MonoBehaviour {
 	public bool None = false;
 	public bool Halloween = false;   // Add other events here
 	public bool Christmas = false;
+	public bool Easter = false;
 	public string Character;
 	public GameObject ChristmasHatBF;
 	public GameObject ChristmasHatAF;
+	public GameObject HalloweenHatBF;
+	public GameObject HalloweenHatAF;
+	public GameObject EasterHatBF;
+	public GameObject EasterHatAF;
 
 	private GameObject EventPuffer;
 	private GameObject InvisPuffer5;
+	private GameObject TheCharacter;
 
-	private void Awake()
+	//Characters
+	private GameObject Magneimite;
+	private GameObject Cute;
+	private GameObject Dragniemite;
+	private GameObject Magnieling;
+
+
+
+
+	void Awake()
 	{
 		EventPuffer = GameObject.Find("EventPuffer");
 		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+		TheCharacter = GameObject.Find(Character);
+
+		Magneimite = GameObject.Find("Magneimite");
+		Cute = GameObject.Find("Cute");
+		Dragniemite = GameObject.Find("Dragniemite");
+		Magnieling = GameObject.Find("Magnieling");
+
+
+
+
+		if (Character == "Magneimite")
+		{
+			TheCharacter = Magneimite;
+		}
+		else if(Character == "Cute")
+		{
+			TheCharacter = Cute;
+		}
+		else if (Character == "Dragniemite")
+		{
+			TheCharacter = Dragniemite;
+		}
+		else if (Character == "Magnieling")
+		{
+			TheCharacter = Magnieling;
+		}
 	}
 
-
+	 
 
 	// Use this for initialization
+
+		
+
+
 	void Start()
 	{
 		if (EventPuffer.GetComponent<Events>().BEvents == true)
@@ -37,21 +82,48 @@ public class Hats : MonoBehaviour {
 				//Put other events here
 				None = false;
 				Halloween = false;
-				
+				Easter = false;
+				HalloweenHatAF.gameObject.SetActive(false);
+				HalloweenHatBF.gameObject.SetActive(false);
+				EasterHatAF.gameObject.SetActive(false);
+				EasterHatBF.gameObject.SetActive(false);
 
 			}
 			else if (EventPuffer.GetComponent<Events>().Halloween == true)
 			{
 				Halloween = true;
 				//Halloween stuff here
+				HalloweenHatAF.gameObject.SetActive(false);
+				HalloweenHatBF.gameObject.SetActive(true);
+
+
+				// Other events belllow
+				Easter = false;
+				Christmas = false;
+				None = false;
+				ChristmasHatAF.gameObject.SetActive(false);
+				ChristmasHatBF.gameObject.SetActive(false);
+				EasterHatAF.gameObject.SetActive(false);
+				EasterHatBF.gameObject.SetActive(false);
+			}
+			// Input other events here
+			else if (EventPuffer.GetComponent<Events>().Easter == true)
+			{
+				Easter = true;
+				//Easter stuff here
+				EasterHatAF.gameObject.SetActive(false);
+				EasterHatBF.gameObject.SetActive(true);
 
 
 				// Other events belllow
 				Christmas = false;
+				Halloween = false;
 				None = false;
-				
+				ChristmasHatAF.gameObject.SetActive(false);
+				ChristmasHatBF.gameObject.SetActive(false);
+				HalloweenHatAF.gameObject.SetActive(false);
+				HalloweenHatBF.gameObject.SetActive(false);
 			}
-			// Input other events here
 			else
 			{
 				None = true;
@@ -66,19 +138,60 @@ public class Hats : MonoBehaviour {
 		{
 			Halloween = false;
 			Christmas = false;
+			Easter = false;
 			//Input other events (boolens) here 
 		}
 
 		if (Halloween == true)
 		{
 			None = false;
+			Halloween = true;
 			Christmas = false;
+			Easter = false;
+
 		}
+
+		if (Christmas == true)
+		{
+			None = false;
+			Halloween = false;
+			Christmas = true;
+			Easter = false;
+
+		}
+
+		if (Easter== true)
+		{
+			None = false;
+			Halloween = false;
+			Christmas = false;
+			Easter = true;
+
+		}
+
+
+		if (Halloween == false)
+		{
+			HalloweenHatAF.gameObject.SetActive(false);
+			HalloweenHatBF.gameObject.SetActive(false);
+
+		}
+		
+		if(Easter == true)
+		{
+			EasterHatAF.gameObject.SetActive(false);
+			EasterHatBF.gameObject.SetActive(false);
+
+		}
+
 
 		if (Christmas == false)
 		{
 			ChristmasHatAF.gameObject.SetActive(false);
 			ChristmasHatBF.gameObject.SetActive(false);
+			
+
+			
 		}
 
 
@@ -91,23 +204,24 @@ public class Hats : MonoBehaviour {
 
 		if (EventPuffer.GetComponent<Events>().BEvents == true )
 		{
-			if(Christmas == true)
+			if (Christmas == true)
 			{
 
 				None = false;
 				Halloween = false;
+				Easter = false;
 
 
 				if (InvisPuffer5.GetComponent<Player_Start>().Char == 1)
 				{
 					//Debug.Log("Cute");
-					if (GameObject.Find(Character).GetComponent<RealFlip>().FlipGrav == true)
+					if (TheCharacter.GetComponent<RealFlip>().FlipGrav == true)
 					{
 						ChristmasHatAF.gameObject.SetActive(true);
 						ChristmasHatBF.gameObject.SetActive(false);
 						//Debug.Log("Flipped");
 					}
-					if (GameObject.Find(Character).GetComponent<RealFlip>().FlipGrav == false)
+					if (TheCharacter.GetComponent<RealFlip>().FlipGrav == false)
 					{
 						ChristmasHatAF.gameObject.SetActive(false);
 						ChristmasHatBF.gameObject.SetActive(true);
@@ -119,8 +233,8 @@ public class Hats : MonoBehaviour {
 
 				else if (InvisPuffer5.GetComponent<Player_Start>().Char == 0)
 				{
-					
-					if (GetComponent<Flip>().FlipGrav == true)
+
+					if (TheCharacter.GetComponent<Flip>().FlipGrav == true)
 					{
 						ChristmasHatAF.gameObject.SetActive(true);
 						ChristmasHatBF.gameObject.SetActive(false);
@@ -128,7 +242,7 @@ public class Hats : MonoBehaviour {
 						//Debug.Log("MagniemiteTest");
 					}
 
-					if (GetComponent<Flip>().FlipGrav == false)
+					if (TheCharacter.GetComponent<Flip>().FlipGrav == false)
 					{
 						ChristmasHatAF.gameObject.SetActive(false);
 						ChristmasHatBF.gameObject.SetActive(true);
@@ -138,20 +252,131 @@ public class Hats : MonoBehaviour {
 
 
 				}
-
-
-
-
 			}
-
-			
-		}
-			if (Halloween == true)
+			else if (Halloween == true)
 			{
-				//Insert Halloween accessory here
-				ChristmasHatAF.gameObject.SetActive(false);
-				ChristmasHatBF.gameObject.SetActive(false);
+
+				None = false;
+				Halloween = true;
+				Christmas = false;
+				Easter = false;
+
+
+				if (InvisPuffer5.GetComponent<Player_Start>().Char == 1)
+				{
+					//Debug.Log("Cute");
+					if (TheCharacter.GetComponent<RealFlip>().FlipGrav == true)
+					{
+						HalloweenHatAF.gameObject.SetActive(true);
+						HalloweenHatBF.gameObject.SetActive(false);
+						//Debug.Log("Flipped");
+					}
+					else if (TheCharacter.GetComponent<RealFlip>().FlipGrav == false)
+					{
+						HalloweenHatAF.gameObject.SetActive(false);
+						HalloweenHatBF.gameObject.SetActive(true);
+						//Debug.Log("NotFlipped");
+					}
+
+
+				}
+
+				else if (InvisPuffer5.GetComponent<Player_Start>().Char == 0)
+				{
+
+					if (TheCharacter.GetComponent<Flip>().FlipGrav == true)
+					{
+						HalloweenHatAF.gameObject.SetActive(true);
+						HalloweenHatBF.gameObject.SetActive(false);
+						Debug.Log("Flipped");
+						//Debug.Log("MagniemiteTest");
+					}
+
+
+					else if (TheCharacter.GetComponent<Flip>().FlipGrav == false)
+					{
+
+						HalloweenHatAF.gameObject.SetActive(false);
+						HalloweenHatBF.gameObject.SetActive(true);
+						Debug.Log("NotFlipped");
+						//Debug.Log("MagniemiteTest");
+					}
+
+				}
+			
+
+
+
+
+
+
+
 			}
+			else if (Easter == true)
+			{
+
+				None = false;
+				Halloween = false;
+				Christmas = false;
+				Easter = true;
+
+
+				if (InvisPuffer5.GetComponent<Player_Start>().Char == 1)
+				{
+					//Debug.Log("Cute");
+					if (TheCharacter.GetComponent<RealFlip>().FlipGrav == true)
+					{
+						EasterHatAF.gameObject.SetActive(true);
+						EasterHatBF.gameObject.SetActive(false);
+						//Debug.Log("Flipped");
+					}
+					else if (TheCharacter.GetComponent<RealFlip>().FlipGrav == false)
+					{
+						EasterHatAF.gameObject.SetActive(false);
+						EasterHatBF.gameObject.SetActive(true);
+						//Debug.Log("NotFlipped");
+					}
+
+
+				}
+
+				else if (InvisPuffer5.GetComponent<Player_Start>().Char == 0)
+				{
+
+					if (TheCharacter.GetComponent<Flip>().FlipGrav == true)
+					{
+						EasterHatAF.gameObject.SetActive(true);
+						EasterHatBF.gameObject.SetActive(false);
+						//Debug.Log("Flipped");
+						//Debug.Log("MagniemiteTest");
+					}
+
+
+					else if (TheCharacter.GetComponent<Flip>().FlipGrav == false)
+					{
+
+						EasterHatAF.gameObject.SetActive(false);
+						EasterHatBF.gameObject.SetActive(true);
+						//Debug.Log("NotFlipped");
+						//Debug.Log("MagniemiteTest");
+					}
+
+				}
+
+
+
+
+
+
+
+
+			}
+
+
+
+
+
+		}
 		
 	}
 }

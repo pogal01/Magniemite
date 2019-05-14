@@ -5,20 +5,33 @@ using UnityEngine;
 public class HatFallFlip : MonoBehaviour {
 
 	public Rigidbody2D Ridge;
-	public GameObject HatHolder;
-	public GameObject HatHolderPos;
-	public GameObject HatBF;
-	public GameObject HatAF;
+	public GameObject HatHolder; //The pareted Hat object
+	public GameObject HatHolderPosChristmas;
+	public GameObject HatHolderPosHalloween;
+	public GameObject HatHolderPosEaster;
+	public GameObject ChristmasHatBF;
+	public GameObject ChristmasHatAF;
+	public GameObject HalloweenHatBF;
+	public GameObject HalloweenHatAF;
+	public GameObject EasterHatBF;
+	public GameObject EasterHatAF;
 	public GameObject PlayerGO;
-	public GameObject HatPosBF;
-	public GameObject HatPosAF;
+	public GameObject CHatPosBF;
+	public GameObject CHatPosAF;
+	public GameObject HHatPosBF;
+	public GameObject HHatPosAF;
+	public GameObject EHatPosBF;
+	public GameObject EHatPosAF;
 	public string PlayerS;
+
+	private GameObject EventPuffer;
 
 	private GameObject InvisPuffer5;
 
 	private void Awake()
 	{
 		InvisPuffer5 = GameObject.Find("InvisablePufferfish5");
+		EventPuffer = GameObject.Find("EventPuffer");
 	}
 
 	// Use this for initialization
@@ -53,12 +66,42 @@ public class HatFallFlip : MonoBehaviour {
 	{
 		Ridge.simulated = false;
 		HatHolder.transform.parent = PlayerGO.transform;
-		HatHolder.transform.position = HatHolderPos.transform.position;
-		HatBF.transform.position = HatPosBF.transform.position;
-		HatBF.transform.rotation = HatPosBF.transform.rotation;
-		HatAF.transform.position = HatPosAF.transform.position;
-		HatAF.transform.rotation = HatPosAF.transform.rotation;
-	}
+		if(EventPuffer.GetComponent<Events>().Christmas == true)
+		{ 
+			HatHolder.transform.position = HatHolderPosChristmas.transform.position;
+			Debug.Log("Christmas");
+			//Christmas
+			ChristmasHatBF.transform.position = CHatPosBF.transform.position;
+			ChristmasHatBF.transform.rotation = CHatPosBF.transform.rotation;
+			ChristmasHatAF.transform.position = CHatPosAF.transform.position;
+			ChristmasHatAF.transform.rotation = CHatPosAF.transform.rotation;
+		}
+		else if (EventPuffer.GetComponent<Events>().Halloween == true)
+		{
+			HatHolder.transform.position = HatHolderPosHalloween.transform.position;
+			Debug.Log("Halloween");
+			//Halloween
+			HalloweenHatBF.transform.position = HHatPosBF.transform.position;
+			HalloweenHatBF.transform.rotation = HHatPosBF.transform.rotation;
+			HalloweenHatAF.transform.position = HHatPosAF.transform.position;
+			HalloweenHatAF.transform.rotation = HHatPosAF.transform.rotation;
+		}
+		else if (EventPuffer.GetComponent<Events>().Easter == true)
+		{
+			//Easter
+			HatHolder.transform.position = HatHolderPosEaster.transform.position;
+			Debug.Log("Easter");
+			EasterHatBF.transform.position = EHatPosBF.transform.position;
+			EasterHatBF.transform.rotation = EHatPosBF.transform.rotation;
+			EasterHatAF.transform.position = EHatPosAF.transform.position;
+			EasterHatAF.transform.rotation = EHatPosAF.transform.rotation;
+		}
+	
+		
+		
+		
+
+	}	
 
 
 
